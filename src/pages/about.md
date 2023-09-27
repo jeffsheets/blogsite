@@ -1,20 +1,25 @@
 ---
-title: About
+title: About Jeff Sheets
 permalink: /about/index.html
-description: About this starter
+description: About me(!)
 layout: page
-youtube: true
 ---
 
-Based on the [companion website](https://buildexcellentwebsit.es/) of Andy Bell's talk 'Be the browser’s mentor, not its micromanager'. It takes over a core functionality: Using Tailwind CSS to generate CSS variables based on design tokens.
+This is my site/blog/side-projects/etc...
 
-Like buildexcellentwebsit.es, this starter uses modern CSS, fluid type & space, flexible Layouts and Progressive Enhancement, wrapped in a basic template, ideal for personal websites and other small projects.
+I'm a java | web developer | engineer | architect in the amazingly energizing city of [Omaha](https://goo.gl/TT7Mp)
 
-The aim is to spread the idea and use of this _excellent_ workflow. To work with it efficiently you should be familiar with [cube.fyi](https://cube.fyi/), [utopia.fyi](https://utopia.fyi/) and [every-layout.dev](https://every-layout.dev/).
+- Coding Craftsman
+- Dev Efficiency Economist
+- DivOps Aficionado
 
-- Find out more on https://buildexcellentwebsit.es/.
-- Remix the original: https://glitch.com/edit/#!/remix/build-excellent-websites
+Mastodon [@jeffsheets@hachyderm.io](https://hachyderm.io/@jeffsheets)
 
-## Watch the talk
+[LinkedIn](https://www.linkedin.com/in/jeffsheets/) profile
 
-{% youtube 'JqnMI1AXl6w', 'Andy Bell – Be the browser’s mentor, not its micromanager' %}
+## Projects
+
+- twitter.sheetsj.com - Twitter Archive
+- GasPumpr.com - an Ethanol e85 Calculator
+- [Github](https://github.com/jeffsheets) repos
+- Github [gists](https://gist.github.com/jeffsheets/)

@@ -1,8 +1,8 @@
 module.exports = {
   top: [
     {
-      text: 'Blog',
-      url: '/blog/'
+      text: 'Home',
+      url: '/'
     },
     {
       text: 'About',
