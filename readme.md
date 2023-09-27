@@ -46,6 +46,14 @@ Minify JS, CSS and HTML.
 npm run build
 ```
 
+### Migrating Blogger to 11ty
+
+- Export blog content backup from Blogger
+- Run [jekyll Blogger import](https://import.jekyllrb.com/docs/blogger/)
+- Rename all .html posts to .md with `find . -name '*.html' -exec sh -c 'mv "$0" "${0%.html}.md"' {} \;`
+- To keep blogger URLs working, update permalinks to match the old blogger path with:
+  - Replace all `blogger_orig_url: https://www.sheetsj.com/` with `permalink: `
+
 ## Built with Eleventy Excellent
 
 Thanks to the devs of the [eleventy-excellent project](https://github.com/madrilene/eleventy-excellent) for the template!
