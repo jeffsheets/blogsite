@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Free static hosting w/ server stats
+title: Free static hosting with server stats
 date: '2023-09-06T15:46:00.004-05:00'
 author: Jeff Sheets
 tags:
