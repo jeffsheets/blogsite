@@ -1,22 +1,27 @@
 [
   {
-    "platform": "github",
-    "url": "https://github.com/madrilene/eleventy-excellent",
-    "icon": "github.svg"
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/in/jeffsheets/",
+    "icon": "linkedin.svg"
   },
   {
     "platform": "mastodon",
-    "url": "https://front-end.social/@lene",
+    "url": "https://hachyderm.io/@jeffsheets",
     "icon": "mastodon.svg"
   },
   {
-    "platform": "ko-fi",
-    "url": "https://ko-fi.com/lenesaile",
-    "icon": "kofi.svg"
+    "platform": "twitter",
+    "url": "https://twitter.com/sheetsj",
+    "icon": "twitter.svg"
+  },
+  {
+    "platform": "github",
+    "url": "https://github.com/jeffsheets/blogsite",
+    "icon": "github.svg"
   },
   {
     "platform": "rss",
-    "url": "/feed.xml",
+    "url": "feed.xml",
     "icon": "rss.svg"
   }
 ]
