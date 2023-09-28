@@ -25,3 +25,7 @@ Twitter [@sheetsj](https://twitter.com/sheetsj)
 - GasPumpr.com - an Ethanol e85 Calculator
 - [Github](https://github.com/jeffsheets) repos
 - Github [gists](https://gist.github.com/jeffsheets/)
+
+## Credits
+
+Thanks to [eleventy-excellent](https://github.com/madrilene/eleventy-excellent) for the template ❤️
