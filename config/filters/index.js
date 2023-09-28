@@ -50,7 +50,7 @@ const toAbsoluteUrl = url => {
 const toISOString = dateString => dayjs(dateString).toISOString();
 
 /** Formats a date using dayjs's conventions: https://day.js.org/docs/en/display/format */
-const formatDate = (date, format) => dayjs(date).utc().local().format(format);
+const formatDate = (date, format) => dayjs(date).tz("America/Chicago").format(format);
 
 const minifyCss = code => new CleanCSS({}).minify(code).styles;
 
