@@ -1,10 +1,16 @@
 const lodash = require('lodash');
 const dayjs = require('dayjs');
+const utc = require("dayjs/plugin/utc");
+const timezone = require("dayjs/plugin/timezone");
 const CleanCSS = require('clean-css');
 const markdownLib = require('../plugins/markdown');
 const site = require('../../src/_data/meta');
 const {throwIfNotType} = require('../utils');
 const md = require('markdown-it')();
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault("America/Chicago");
 
 /** Returns the first `limit` elements of the the given array. */
 const limit = (array, limit) => {
@@ -44,7 +50,7 @@ const toAbsoluteUrl = url => {
 const toISOString = dateString => dayjs(dateString).toISOString();
 
 /** Formats a date using dayjs's conventions: https://day.js.org/docs/en/display/format */
-const formatDate = (date, format) => dayjs(date).format(format);
+const formatDate = (date, format) => dayjs(date).utc().format(format);
 
 const minifyCss = code => new CleanCSS({}).minify(code).styles;
 
