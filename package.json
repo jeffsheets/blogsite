@@ -34,7 +34,7 @@
     "autoprefixer": "^10.4.13",
     "clean-css": "^5.3.1",
     "cssnano": "^6.0.0",
-    "dayjs": "^1.11.5",
+    "dayjs": "^1.11.10",
     "dotenv": "^16.0.3",
     "esbuild": "^0.19.0",
     "html-minifier-terser": "^7.1.0",
