@@ -17,6 +17,8 @@ Mastodon [@jeffsheets@hachyderm.io](https://hachyderm.io/@jeffsheets)
 
 [LinkedIn](https://www.linkedin.com/in/jeffsheets/) profile
 
+Twitter [@sheetsj](https://twitter.com/sheetsj)
+
 ## Projects
 
 - twitter.sheetsj.com - Twitter Archive

@@ -13,7 +13,7 @@ module.exports = {
   themeColor: '#1CAF7D', //  Manifest: defines the default theme color for the application
   themeBgColor: '#F3F3F3', // Manifest: defines a placeholder background color for the application page to display before its stylesheet is loaded
   meta_data: {
-    opengraph_default: '/assets/images/opengraph-default.jpg', // fallback/default meta image
+    opengraph_default: '/assets/images/opengraph-default.jpeg', // fallback/default meta image
     opengraph_default_alt: 'sheetsj.com blog', // alt text for default meta image
     twitterSite: '@sheetsj', // i.e. @site - twitter profile of the site
     twitterCreator: '@sheetsj', // i.e. @author -  twitter profile of the site
