@@ -14,3 +14,11 @@
   max-inline-size: var(--max-img-width, 100%);
   block-size: auto;
 }
+
+.repel {
+  align-items: var(--repel-vertical-alignment,center);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter,var(--space-s-l));
+  justify-content: space-between;
+}

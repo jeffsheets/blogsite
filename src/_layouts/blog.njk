@@ -16,7 +16,7 @@ layout: base
 
 <article class="wrapper region">
   <ul class="grid mt-xs" role="list" data-rows="masonry" data-layout="50-50">
-    {% set postslist = collections.posts %} {% for post in postslist %}
+    {% set postslist = pagination.items %} {% for post in postslist %}
 
     <li class="card flow overflow-hidden">
       <h2>
@@ -28,4 +28,5 @@ layout: base
 
     {% endfor %}
   </ul>
+  {% include "partials/pagination.njk" %}
 </article>

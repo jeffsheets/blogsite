@@ -2,5 +2,11 @@
 title: Uncommented Bytes
 description: 'Tech briefs and notes from Jeff Sheets'
 layout: blog
-permalink: /index.html
+pagination:
+    data: collections.posts
+    size: 10
+permalink: '{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html'
+paginationPrevText: 'Newer posts'
+paginationNextText: 'Older posts'
+paginationAnchor: '#post-list'
 ---
