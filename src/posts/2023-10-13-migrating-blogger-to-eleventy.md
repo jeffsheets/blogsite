@@ -18,7 +18,8 @@ Or maybe when your baseball team is the Twins and they
 Or maybe, it's finally time to continue moving away the shady tracking side of the google-verse.
 
 But in reality? I like things that run forever. With very little thought. I also like free (as in beer and as in money).
-Blogger might be old but it was _always_ dependable. It's looked dated for years now though. And it comes from a time
+Blogger might be old but it was _always_ dependable. It's looked dated for years now though (you can still see my old
+blog for now at https://uncommentedbytes.blogspot.com). And it comes from a time
 when server-side database-backed blogs were a thing (i mean i was originally on jroller before blogger came around.
 And who remembers when blogger was implementation agnostic and FTP'd files around for you??).
 
