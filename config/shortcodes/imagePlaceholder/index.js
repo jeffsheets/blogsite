@@ -25,7 +25,8 @@ const imageShortcodePlaceholder = async (
     }
   });
 
-  let lowsrc = metadata.jpeg[metadata.jpeg.length - 1];
+  let lowsrc = metadata.jpeg[0];
+  let lowsrcSize = metadata.jpeg[metadata.jpeg.length - 1];
 
   // getting the url  to use
   let imgSrc = src;
@@ -47,10 +48,9 @@ const imageShortcodePlaceholder = async (
       })
       .join('\n')}
       <img
-        src="/assets/images/image-placeholder.png"
-        data-src="${lowsrc.url}"
-        width="${lowsrc.width}"
-        height="${lowsrc.height}"
+        src="${lowsrc.url}"
+        width="${lowsrcSize.width}"
+        height="${lowsrcSize.height}"
         alt="${alt}"
 				loading = 'lazy'
         decoding="async">
