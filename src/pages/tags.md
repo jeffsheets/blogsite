@@ -3,7 +3,7 @@ pagination:
   data: collections
   size: 1
   alias: tag
-permalink: /tags/{{ tag }}/
+permalink: /tags/{{ tag | slugify }}/
 layout: page
 ---
 <h1>Tagged “{{ tag }}”</h1>
