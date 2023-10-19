@@ -22,3 +22,29 @@
   gap: var(--gutter,var(--space-s-l));
   justify-content: space-between;
 }
+
+/* Tags list */
+dl.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+  align-items: center;
+  font-size:.85em;
+  margin-top: .2em;
+}
+
+dl.meta dt {
+  flex-basis: 8rem;
+  flex-grow: 1;
+}
+
+dl.meta dd {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 70%;
+  display: block;
+}
+
+dl.meta a {
+  margin-right: .4em;
+}

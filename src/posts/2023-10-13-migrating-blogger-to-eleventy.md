@@ -2,6 +2,10 @@
 title: 'Migrating Blogger to Eleventy'
 description: 'Shifting sheetsj.com into the future'
 date: '2023-10-13T09:00:00.000-05:00'
+tags:
+- eleventy
+- jamstack
+- blogger
 ---
 
 Blogging for me has always been one of those background processes that just keeps running -- consistently there,
@@ -42,7 +46,7 @@ relatively painless!
 
 ### TL;DR; already please
 for the super impatient here's [my mastodon post](https://elk.zone/hachyderm.io/@jeffsheets/111140679316431910) below
-{% imagePlaceholder "./src/assets/images/posts/blogger-to-eleventy-mastodon.png", "Mastodon post with eleventy migration steps", "" %}
+{% imagePlaceholder "./src/assets/images/posts/blogger-to-eleventy-mastodon.png", "Mastodon post with eleventy migration steps", "whatevs" %}
 
 1. Export Blogger content to the [backup xml file](https://support.google.com/blogger/answer/41387?visit_id=638328463493677559-1019383255&rd=1)
 2. Run the Jekyll Blogger [import script](https://import.jekyllrb.com/docs/blogger/)
