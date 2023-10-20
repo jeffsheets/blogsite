@@ -17,7 +17,7 @@ Sr Principal Consultant @ [DevObsessed](https://www.devobsessed.com)
 ## Projects
 
 - GasPumpr.com - an Ethanol e85 Calculator
-- Alexa PapioMenu lunch menu skill bot - [github](https://github.com/jeffsheets/alexa-papio-lunch-menu) - [Alexa Skill Store](https://www.amazon.com/Jeff-Sheets-Papio-Menu-Lunch/dp/B08ZNJ2FQY/)  
+- Alexa PapioMenu lunch bot - [Alexa Skill Store](https://www.amazon.com/Jeff-Sheets-Papio-Menu-Lunch/dp/B08ZNJ2FQY/)- [github](https://github.com/jeffsheets/alexa-papio-lunch-menu)  
 <video muted="" controls="" src="https://twitter.sheetsj.com/video/1374171248813608968.mp4" poster="https://twitter.sheetsj.com/img/x_mMyvEl7z.jpeg" width="200"></video>  
 <sup>[[tweet thread]](https://twitter.sheetsj.com/1374171248813608968/)</sup>
 - twitter.sheetsj.com - Twitter Archive
