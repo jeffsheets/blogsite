@@ -2,6 +2,17 @@
   --flow-space: var(--space-m-l);
   --wrapper-max-width: 55rem;
 }
+.prose-home {
+  --flow-space: var(--space-m-l);
+  --wrapper-max-width: 85rem;
+}
+.prose-home p, .prose-home h2 {
+  margin: 0 auto;
+  text-align: center;
+}
+.region.home-content {
+  padding-block-end: 0;
+}
 
 .prose :is(h2, h3, h4) + * {
   --flow-space: var(--space-s-m);

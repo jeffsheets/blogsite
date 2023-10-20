@@ -1,12 +1,9 @@
 ---
 title: Uncommented Bytes
-description: 'Tech briefs and notes from Jeff Sheets'
-layout: blog
-pagination:
-    data: collections.posts
-    size: 10
-permalink: '{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html'
-paginationPrevText: 'Newer posts'
-paginationNextText: 'Older posts'
-paginationAnchor: '#post-list'
+description: 'Jeff Sheets'
+layout: home
+permalink: '/index.html'
 ---
+I'm a java | web developer | engineer | architect in the  
+amazingly energizing city of [Omaha](https://goo.gl/TT7Mp) 🎉  
+Chief Software Archaeologist @ [DevObsessed](https://www.devobsessed.com)

@@ -96,7 +96,8 @@ main:focus {
   outline: none;
 }
 
-article [href^='http']:not([href*='sheetsj.com'])::after {
+/* external link identifier */
+/*article [href^='http']:not([href*='sheetsj.com'])::after {
   display: inline-block;
   inline-size: 1em;
   block-size: 1em;
@@ -104,12 +105,12 @@ article [href^='http']:not([href*='sheetsj.com'])::after {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60% auto;
-  /* alternative text rules */
+  !* alternative text rules *!
   content: '(external link)';
   overflow: hidden;
   white-space: nowrap;
-  text-indent: 1em; /* the width of the icon */
-}
+  text-indent: 1em; !* the width of the icon *!
+}*/
 
 /* Base selection styles that invert whatever colours are rendered */
 ::selection {
