@@ -100,12 +100,12 @@ running that high of a charge on my own.
 My electrician put in a cheap Lutron outlet. It worked fine for a year and then my car started complaining about the
 charger being too hot. I then found that everyone recommends a Hubbell outlet. So save yourself a ton of time and
 install a Hubbell brand from the get go. They aren't that much more and you'll need it.
+- **Tax write-off**  
+The cost is partially covered by an IRS tax write-off, which was really nice
 
 ## Random Stuff 💡
-- It’s heavy  
-EV's weigh a bunch more. You mostly won't notice but it does help in the snow.
-- Uses special tires  
-Because of the weight, EV's need slightly special tires. Some also have padding to help with road noise, or so I hear.
+- It’s heavy- EV's weigh a bunch more. You mostly won't notice but it does help in the snow.
+- Uses special tires - Because of the weight, EV's need slightly special tires. Some also have padding to help with road noise, or so I hear.
 - Frunk space - kinda cool to have extra storage in the front!
 - Regen braking and coasting - it does take a week or two of driving to get used to this
 - Regen low when cold - Cold weather affects the battery. The regen won't work as well. Also you'll have less overall range.
@@ -118,3 +118,5 @@ will add up in the long term
 Seriously, all cars are expensive now. The average car costs way more than you'd think! EVs are often cheaper than
 an average new car ([yes, even Teslas](https://www.businessinsider.com/tesla-model-3-model-y-less-than-average-gas-car-2023-10)!)
 so if you're looking for a new car anyway definitely look for an EV.
+- **Federal and Local Incentives**  
+The Federal and Local incentives are pretty good and don't forget to look into them
