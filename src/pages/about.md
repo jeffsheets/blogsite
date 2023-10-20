@@ -5,26 +5,30 @@ description: About me(!)
 layout: page
 ---
 
-This is my site/blog/side-projects/etc...
-
 I'm a java | web developer | engineer | architect in the amazingly energizing city of [Omaha](https://goo.gl/TT7Mp)
+
+Sr Principal Consultant @ [DevObsessed](https://www.devobsessed.com)
 
 - Coding Craftsman
 - Dev Efficiency Economist
 - DivOps Aficionado
-
-Mastodon [@jeffsheets@hachyderm.io](https://hachyderm.io/@jeffsheets)
-
-[LinkedIn](https://www.linkedin.com/in/jeffsheets/) profile
-
-Twitter [@sheetsj](https://twitter.com/sheetsj)
+- Chief Software Archaeologist
 
 ## Projects
 
-- twitter.sheetsj.com - Twitter Archive
 - GasPumpr.com - an Ethanol e85 Calculator
+- Alexa PapioMenu lunch menu skill bot - [github](https://github.com/jeffsheets/alexa-papio-lunch-menu) - [Alexa Skill Store](https://www.amazon.com/Jeff-Sheets-Papio-Menu-Lunch/dp/B08ZNJ2FQY/)  
+<video muted="" controls="" src="https://twitter.sheetsj.com/video/1374171248813608968.mp4" poster="https://twitter.sheetsj.com/img/x_mMyvEl7z.jpeg" width="200"></video>  
+<sup>[[tweet thread]](https://twitter.sheetsj.com/1374171248813608968/)</sup>
+- twitter.sheetsj.com - Twitter Archive
 - [Github](https://github.com/jeffsheets) repos
 - Github [gists](https://gist.github.com/jeffsheets/)
+
+## Contact
+
+🐘 Mastodon [@jeffsheets@hachyderm.io](https://hachyderm.io/@jeffsheets)
+
+🔗 [LinkedIn](https://www.linkedin.com/in/jeffsheets/) profile
 
 ## Credits
 

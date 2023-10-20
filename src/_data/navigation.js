@@ -9,12 +9,12 @@ module.exports = {
       url: '/about/'
     },
     {
-      text: 'GasPumpr',
-      url: 'https://gaspumpr.com/'
+      text: 'Projects',
+      url: '/about/#projects'
     },
     {
-      text: 'Tweets',
-      url: 'https://twitter.sheetsj.com/'
+      text: 'GasPumpr',
+      url: 'https://gaspumpr.com/'
     }
   ],
   bottom: [
