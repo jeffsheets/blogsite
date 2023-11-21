@@ -13,5 +13,6 @@ src/_includes/scripts
 .env
 
 /.idea/
+/.vscode/
 
 **/.DS_Store
