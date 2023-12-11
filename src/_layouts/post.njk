@@ -27,7 +27,7 @@ preloads:
         <dt>Tags:</dt>
         <dd>
         {% for tag in postTags %}
-          <a href="/tags/{{ tag }}">{{ tag }}</a>
+          <a href="/tags/{{ tag | slugify }}">{{ tag }}</a>
         {% endfor %}
         </dd>
       {% endif %}
