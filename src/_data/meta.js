@@ -33,5 +33,10 @@ module.exports = {
   },
   menu: {
     closedText: 'Menu'
+  },
+  env: process.env.ELEVENTY_ENV,
+  umami: {
+    websiteId: "68632b69-22b2-4cd1-8327-67c7bf6d737d",
+    jsLocation: "https://us.umami.is/script.js",
   }
 };
