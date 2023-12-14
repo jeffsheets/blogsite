@@ -106,7 +106,7 @@ const mdInline = (content, opts) => {
 };
 
 // source: https://github.com/bnijenhuis/bnijenhuis-nl/blob/main/.eleventy.js
-const splitlines = (input, maxCharLength) => {
+const splitlines = (input = '', maxCharLength) => {
   const parts = input.split(' ');
   const lines = parts.reduce(function (acc, cur) {
     if (!acc.length) {

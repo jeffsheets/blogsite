@@ -22,6 +22,7 @@ module.exports = {
   blog: {
     // this is for the rss feed
     name: 'Jeff Sheets - Uncommented Bytes',
+    ogTitle: 'Uncommented Bytes',
     description:
       'Tech briefs and notes by Jeff Sheets'
   },
