@@ -2,14 +2,7 @@
 
 <meta
   name="description"
-  content="
-  {% if seo.description %} {{ seo.description }}
-  {% elif description %}
-  {{ description }}
-  {% else %}
-  {{ meta.siteDescription }}
-  {% endif %}
-  "
+  content="{% if seo.description %}{{ seo.description }}{% elif description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}"
 />
 
 <meta name="theme-color" content="{{ meta.themeColor }}" />
@@ -38,22 +31,15 @@
 />
 <meta
   property="og:image"
-  content="{{ meta.url }}{% if (layout == 'post') %}/assets/images/social-preview/{{
-    title | slugify
-  }}-preview.jpeg
-  {% else %}{{ meta.meta_data.opengraph_default }}
-  {% endif %}"
+  content="{{ meta.url }}{% if (layout == 'post') %}/assets/images/social-preview/{{title | slugify}}-preview.jpeg{% else %}{{ meta.meta_data.opengraph_default }}{% endif %}"
 />
 <meta
   property="og:image:alt"
-  content="{% if (layout == 'post') %}{% else %}{{ meta.meta_data.opengraph_default_alt }}
-{% endif %}"
+  content="{% if (layout == 'post') %}{% else %}{{ meta.meta_data.opengraph_default_alt }}{% endif %}"
 />
 <meta
   property="og:description"
-  content="{% if description %}{{ description }}{% else %}{{
-    meta.siteDescription
-  }}{% endif %}"
+  content="{% if description %}{{ description }}{% else %}{{meta.siteDescription}}{% endif %}"
 />
 <meta property="og:site_name" content="{{ meta.siteName }}" />
 <meta property="og:locale" content="{{ meta.locale }}" />

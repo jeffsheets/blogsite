@@ -1,5 +1,5 @@
 const htmlmin = require('html-minifier-terser');
-const isProduction = process.env.ELEVENTY_ENV === 'production';
+const isProduction = process.env.ELEVENTY_ENV === 'prod';
 
 module.exports = eleventyConfig => {
   eleventyConfig.addTransform('html-minify', (content, path) => {
