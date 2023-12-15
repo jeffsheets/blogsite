@@ -38,47 +38,54 @@ For a long time, our main Omaha Java Users Group communication has been
       After a little trial and error from their API docs, and increasing the result count to 100 to
       get all of our events without paging, I was able to export all of the past events to JSON
       with:
-      <pre><code class="language-graphql"> query($meetupId: String!) {
-      groupByUrlname(urlname: $meetupId) {
-      description
-      pastEvents(input: {first: 100}) {
+```graphql  
+query($meetupId: String!) {
+  groupByUrlname(urlname: $meetupId) {
+    description
+    pastEvents(input: {first: 100}) {
       count
       edges {
-      node {
-      title
-      description
-      dateTime
-      going
+        node {
+          title
+          description
+          dateTime
+          going
+        }
       }
-      }
-      }
-      }
-      }
-      </code></pre>
+    }
+  }
+}
+```
       And some inputs of:
-      <pre><code class="language-json"> {"meetupId":"omahajava"}
-      </code></pre>
+```json
+ {"meetupId":"omahajava"}
+```
       Which gave <a
       href="https://github.com/jeffsheets/ojug-meetup-export/blob/main/src/meetup-events-export-2022-08-25.json">a
       nice JSON result</a>, like this:
-      <pre><code class="language-json">{
+```json
+{
       "data": {
-      "groupByUrlname": {
-      "description": "Omaha's Java User Group [@omahajug](https://twitter.com/omahajug/). yadda
-      yadda yadda",
-      "pastEvents": {
-      "count": 65,
-      "edges": [
-      {
-      "node": {
-      "title": "Angular JS for Java Developers",
-      "description": "This month //etc etc etc",
-      "dateTime": "2014-05-20T17:30-05:00",
-      "going": 27
-      }
+        "groupByUrlname": {
+          "description": "Omaha's Java User Group [@omahajug](https://twitter.com/omahajug/). yadda yadda yadda",
+          "pastEvents": {
+            "count": 65,
+            "edges": [
+              {
+                "node": {
+                   "title": "Angular JS for Java Developers",
+                   "description": "This month //etc etc etc",
+                   "dateTime": "2014-05-20T17:30-05:00",
+                   "going": 27
+                }
+              }
+            ]
+          }
+        }
       },
-      .....
-      </code></pre>
+      "etc": "................."
+}
+```
       </p>
       <p>
       <h3>ojug.org Tech</h3>
@@ -102,7 +109,8 @@ For a long time, our main Omaha Java Users Group communication has been
       date formats, and a filename creation function. The groovy <a
       href="https://github.com/jeffsheets/ojug-meetup-export/blob/main/src/post.gsp">post.gsp
       template</a> looks like:
-      <pre><code>---
+```
+      ---
       layout: post
       title: "&lt;%= longDate %> &lt;%= title %>"
       ---
@@ -110,31 +118,33 @@ For a long time, our main Omaha Java Users Group communication has been
       &lt;%= description %>
 
       (This past event was exported from Meetup.com)
-      (&lt;%= attended %> people had RSVP'd to this event in Meetup)</code></pre>
+      (&lt;%= attended %> people had RSVP'd to this event in Meetup)
+```
       Then the code that generates the template for each JSON event is in <a
       href="https://github.com/jeffsheets/ojug-meetup-export/blob/main/src/PostGenerator.groovy">PostGenerator.groovy</a>:
-      <pre><code class="language-groovy"> void generatePosts() {
-      def events = new
-      JsonSlurper().parse(getClass().getResource(SRC_JSON)).data.groupByUrlname.pastEvents.edges
-      events.each {
+```groovy
+void generatePosts() {
+    def events = new JsonSlurper().parse(getClass().getResource(SRC_JSON)).data.groupByUrlname.pastEvents.edges
+    events.each {
       def event = it.node
       def filename = makeFilename(event.title, event.dateTime)
       def outfile = new File("$DEST_FOLDER/$filename")
       def filecontents = new SimpleTemplateEngine()
-      .createTemplate(getClass().getResource('/post.gsp'))
-      .make([
-      title : event.title.replaceAll('"', '\"'),
-      description: event.description,
-      longDate : convertToLongDate(event.dateTime),
-      attended : event.going
-      ])
-      .toString()
+        .createTemplate(getClass().getResource('/post.gsp'))
+        .make([
+          title : event.title.replaceAll('"', '\"'),
+          description: event.description,
+          longDate : convertToLongDate(event.dateTime),
+          attended : event.going
+        ]).toString()
       outfile.write filecontents
-      }
-      }</code></pre>
+    }
+}
+```
       When executed, nice markdown files are generated in the output directory, similar to <a
       href="https://github.com/OJUG/ojug.github.io/blob/master/_posts/2014-05-20-angular-js-for-java-developers.md">2014-05-20-angular-js-for-java-developers.md</a>:
-      <pre><code class="language-markdown">---
+```markdown
+      ---
       layout: post
       title: "May 20, 2014 Angular JS for Java Developers"
       ---
@@ -142,7 +152,8 @@ For a long time, our main Omaha Java Users Group communication has been
       This month //etc etc etc
 
       (This past event was exported from Meetup.com)
-      (27 people had RSVP'd to this event in Meetup)</code></pre>
+      (27 people had RSVP'd to this event in Meetup)
+```  
       The last step was to copy all of the new markdown files into the _posts directory, create a
       PR, merge it, and see the final results up at <a
       href="http://ojug.org/">ojug.org</a>!
