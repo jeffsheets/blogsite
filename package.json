@@ -11,7 +11,7 @@
     "clean": "rimraf dist",
     "start": "ELEVENTY_ENV=dev eleventy --serve --watch",
     "start-prod": "ELEVENTY_ENV=prod eleventy --serve --watch",
-    "build": "ELEVENTY_ENV=prod npm run clean && eleventy"
+    "build": "npm run clean && ELEVENTY_ENV=prod eleventy"
   },
   "keywords": [],
   "repository": {
