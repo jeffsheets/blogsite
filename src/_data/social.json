@@ -10,11 +10,6 @@
     "icon": "mastodon.svg"
   },
   {
-    "platform": "twitter",
-    "url": "https://twitter.com/sheetsj",
-    "icon": "twitter.svg"
-  },
-  {
     "platform": "github",
     "url": "https://github.com/jeffsheets/blogsite",
     "icon": "github.svg"
