@@ -1,5 +1,5 @@
 ---
-title: 'Thoughts On EV Driving'
+title: 'Thoughts On EVs'
 description: 'After 18 months with an electric vehicle'
 date: '2023-10-20T09:00:00.000-05:00'
 permalink: blog/thoughts-on-my-ev/
