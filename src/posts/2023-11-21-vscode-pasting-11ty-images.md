@@ -4,6 +4,7 @@ description: 'Creating content locally like a hosted editor'
 date: '2023-11-21T09:00:00.000-05:00'
 tags:
 - 11ty
+- eleventy
 - VSCode
 ---
 

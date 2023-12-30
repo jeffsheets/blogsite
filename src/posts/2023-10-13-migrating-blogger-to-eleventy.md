@@ -4,6 +4,7 @@ description: 'Shifting sheetsj.com into the future'
 date: '2023-10-13T09:00:00.000-05:00'
 tags:
 - eleventy
+- 11ty
 - jamstack
 - blogger
 ---

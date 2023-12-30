@@ -4,6 +4,7 @@ description: 'Improving the local 11ty blog DX'
 date: '2023-12-12T09:00:00.000-05:00'
 tags:
 - 11ty
+- eleventy
 - IntelliJ
 - Markdown
 ---
