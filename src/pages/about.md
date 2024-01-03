@@ -30,6 +30,11 @@ Sr Principal Consultant @ [DevObsessed](https://www.devobsessed.com)
 
 🔗 [LinkedIn](https://www.linkedin.com/in/jeffsheets/) profile
 
+## Post Stats
+
+See how I'm posting over time (thanks to the [postgraph plugin](https://postgraph.rknight.me)):
+{% postGraph collections.posts %}
+
 ## Credits
 
 Thanks to [eleventy-excellent](https://github.com/madrilene/eleventy-excellent) for the template ❤️
