@@ -29,6 +29,19 @@ const toHtml = markdownString => {
   return markdownLib.renderInline(markdownString);
 };
 
+/**
+ * Removes .html from end of string.
+ * Used for canonical urls, to fix the blogger imported old url's that require .html path to exist
+ *  but Cloudflare deploy redirects to remove the .html.
+ *  then google complains about redirects for canonical URLs.
+ * So using this, our "new" posts will have canonical URLs like /mypost/ served from /mypost/index.html
+ *  but the old blogger ones will be /mypost served from /mypost.html
+ * *sigh*
+ */
+const removeHtmlSuffix = urlString => {
+  return urlString.replace(/\.html$/, '');
+}
+
 /** Removes all tags from an HTML string. */
 const stripHtml = str => {
   throwIfNotType(str, 'string');
@@ -138,5 +151,6 @@ module.exports = {
   minifyCss,
   minifyJs,
   mdInline,
-  splitlines
+  splitlines,
+  removeHtmlSuffix
 };

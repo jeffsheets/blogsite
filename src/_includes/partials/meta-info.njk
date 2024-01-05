@@ -11,8 +11,9 @@
 <meta name="generator" content="{{ eleventy.generator }}" /><!-- thank you, Zach -->
 <!-- Disable automatic detection and formatting of possible phone numbers -->
 <meta name="format-detection" content="telephone=no" />
-<!-- Helps prevent duplicate content issues -->
-<link rel="canonical" href="{{ meta.url }}{{ page.url }}" />
+
+<!-- see removeHtmlSuffix comment for more details, but this is a hack for old blogger pages plus cloudflare/google -->
+<link rel="canonical" href="{{ meta.url }}{{ page.url | removeHtmlSuffix }}" />
 
 <!-- Links to information about the author(s) of the document -->
 <link rel="author" href="humans.txt" />
