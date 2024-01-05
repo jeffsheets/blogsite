@@ -12,7 +12,7 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.tz.setDefault("America/Chicago");
 
-/** Returns the first `limit` elements of the the given array. */
+/** Returns the first `limit` elements of the given array. */
 const limit = (array, limit) => {
   if (limit < 0) {
     throw new Error(`Negative limits are not allowed: ${limit}.`);
