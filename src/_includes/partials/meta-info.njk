@@ -24,7 +24,7 @@
 {% endif %}
 
 <!-- Open Graph meta  -->
-<meta property="og:url" content="{{ meta.url }}{{ page.url }}" />
+<meta property="og:url" content="{{ meta.url }}{{ page.url | removeHtmlSuffix }}" />
 <meta property="og:type" content="website" />
 <meta
   property="og:title"
