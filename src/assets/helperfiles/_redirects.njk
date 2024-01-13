@@ -7,7 +7,7 @@ permalink: /_redirects
 eleventyExcludeFromCollections: true
 excludeFromSitemap: true
 ---
-/feeds/posts/default feed.xml 301
+/feeds/posts/default /feed.xml 301
 {% for page in collections.all %}
   {% if page.url and page.data.redirectFrom %}
     {% for oldUrl in page.data.redirectFrom %}
