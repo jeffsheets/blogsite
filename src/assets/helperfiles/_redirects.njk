@@ -1,8 +1,13 @@
 ---
+# https://developers.cloudflare.com/pages/configuration/redirects/
+# specify individual redirects with: old_page new_page code
+# but this also grabs a "redirectFrom" field from actual pages too
+# This redirect works as part of cloudflare Pages.
 permalink: /_redirects
 eleventyExcludeFromCollections: true
 excludeFromSitemap: true
 ---
+/feeds/posts/default feed.xml 301
 {% for page in collections.all %}
   {% if page.url and page.data.redirectFrom %}
     {% for oldUrl in page.data.redirectFrom %}
