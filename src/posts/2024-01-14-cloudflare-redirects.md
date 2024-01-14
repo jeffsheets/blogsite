@@ -1,6 +1,7 @@
 ---
 title: 'Cloudflare _redirects'
 description: 'Keeping old paths alive on the new site'
+date: '2024-01-14T09:00:00.000-05:00'
 tags:
 - 11ty
 - eleventy
