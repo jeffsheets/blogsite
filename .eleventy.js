@@ -29,7 +29,8 @@ const {
   minifyJs,
   mdInline,
   splitlines,
-  removeHtmlSuffix
+  removeHtmlSuffix,
+  webmentionsByUrl
 } = require('./config/filters/index.js');
 
 // module import shortcodes
@@ -70,6 +71,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias('post', 'post.njk');
 
   // 	---------------------  Custom filters -----------------------
+  eleventyConfig.addFilter('webmentionsByUrl', webmentionsByUrl);
   eleventyConfig.addFilter('limit', limit);
   eleventyConfig.addFilter('where', where);
   eleventyConfig.addFilter('escape', escape);
