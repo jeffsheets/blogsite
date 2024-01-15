@@ -60,6 +60,10 @@ for the super impatient here's [my mastodon post](https://elk.zone/hachyderm.io/
 9. Login to sheetsj.com and see all the beautiful-ness
 10. pretend you'll blog more now
 
+>Edited 2024-01-14 to add: \
+>11. Redirect the old RSS feed location to `/feed.xml`. \
+>Here's the steps I used for Cloudflare Pages _redirects: [Cloudflare _redirects](https://sheetsj.com/blog/cloudflare-_redirects/)
+
 ## Minor other updates
 I can't remember all the tiny changes I made. But some little things like:
 - disabled the avif image support in the imagePlaceholder js, as it wasn't working for some reason
