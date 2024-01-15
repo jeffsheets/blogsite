@@ -6,6 +6,7 @@ const CleanCSS = require('clean-css');
 const markdownLib = require('../plugins/markdown');
 const site = require('../../src/_data/meta');
 const {throwIfNotType} = require('../utils');
+const { webmentionsByUrl} = require('./webmentionsbyurl');
 const md = require('markdown-it')();
 
 dayjs.extend(utc);
@@ -152,5 +153,6 @@ module.exports = {
   minifyJs,
   mdInline,
   splitlines,
-  removeHtmlSuffix
+  removeHtmlSuffix,
+  webmentionsByUrl
 };

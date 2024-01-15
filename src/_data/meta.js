@@ -9,7 +9,7 @@ module.exports = {
   skipContent: 'Skip to content',
   author: 'Jeff Sheets',
   authorEmail: 'jeffsheets@gmail.com',
-  authorWebsite: 'https://www.sheetsj.com',
+  authorWebsite: 'https://sheetsj.com',
   themeColor: '#1CAF7D', //  Manifest: defines the default theme color for the application
   themeBgColor: '#F3F3F3', // Manifest: defines a placeholder background color for the application page to display before its stylesheet is loaded
   meta_data: {
