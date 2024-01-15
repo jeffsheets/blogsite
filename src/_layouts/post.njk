@@ -34,7 +34,7 @@ preloads:
     </dl>
 
     {{ content | safe }}
-    <hr>
+
     {% set mentions = webmentions.mentions | webmentionsByUrl(page.url) %}
     {% if  mentions.mentionCount > 0 %}
       {% include 'partials/webmentions.njk' %}

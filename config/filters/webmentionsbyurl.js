@@ -1,6 +1,9 @@
 const sanitizeHTML = require("sanitize-html");
 const meta = require('../../src/_data/meta');
 
+/**
+ * Remixed via heavy inspiration from https://www.bobmonsour.com/posts/adding-webmentions-to-my-site/
+ */
 function webmentionsByUrl(webmentions, url) {
   const allowedTypes = {
     likes: ["like-of"],
@@ -10,9 +13,12 @@ function webmentionsByUrl(webmentions, url) {
 
   const sanitize = (entry) => {
     if (entry.content && entry.content.html) {
-      entry.content = sanitizeHTML(entry.content.html, {
-        allowedTags: ["b", "i", "em", "strong", "a"],
-      });
+      return {
+        ...entry,
+        content: sanitizeHTML(entry.content.html, {
+          allowedTags: ["b", "i", "em", "strong", "a"],
+        }).replace(/\?\?\?\?/g, '')
+      }
     }
     return entry;
   };
@@ -21,7 +27,7 @@ function webmentionsByUrl(webmentions, url) {
     .filter(
       (mention) => mention["wm-target"] === meta.authorWebsite + url
     )
-    .sort((a, b) => new Date(b.published) - new Date(a.published))
+    .sort((a, b) => new Date(a.published) - new Date(b.published))
     .map(sanitize);
 
   const likes = pageWebmentions
@@ -43,6 +49,6 @@ function webmentionsByUrl(webmentions, url) {
 
   const mentionCount = likes.length + reposts.length + comments.length;
   return { likes, reposts, comments, mentionCount };
-};
+}
 
 module.exports = { webmentionsByUrl };

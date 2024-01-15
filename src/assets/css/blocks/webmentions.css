@@ -1,0 +1,48 @@
+.webmentions {
+    .likes, .reposts {
+        margin-block-end: .5em;
+    }
+    img.mention-image {
+        border: 3px solid var(--color-secondary);
+        border-radius: 50%;
+        block-size: 2em;
+        inline-size: 2em;
+        display: inline;
+        background-color: var(--color-light);
+        vertical-align: middle;
+        
+        &:hover {
+            border: 3px solid var(--color-primary);
+        }
+    }
+    a:has(img) {
+        border: none;
+        margin: 0 -.3em;
+        text-decoration: none;
+    }
+    details {
+        margin-block-end: 1em;
+    }
+    summary {
+        border: none;
+        outline: none;
+    }
+    .comment {
+        margin-block-end: .5em;
+
+        .comment-author-text {
+            font-size: .8em;
+            margin-inline-start: .2em;
+        }
+        .comment-date {
+            margin-inline-start: 1em;
+            font-size: .6em;
+            vertical-align: middle;
+        }
+        .comment-content {
+            font-size: .8em;
+            margin-inline-start: 2.6em;
+            margin-block-start: -.3em;
+        }
+    }
+}
