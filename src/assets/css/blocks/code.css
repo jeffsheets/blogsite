@@ -23,8 +23,15 @@ pre[class*='language-'] {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
+  
+  /* light mode */
+  /*color: var(--color-light);*/
+  /*background: var(--color-dark);*/
+  
+  /* dark mode */
   color: #777;
   background: var(--color-light-glare);
+  
   line-height: 1.5;
   border-radius: var(--border-radius);
 
@@ -159,6 +166,7 @@ pre[class*='language-'] {
 }
 
 .token.parameter {
+  /* dark mode */
   color: #777;
 }
 
