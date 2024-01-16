@@ -1,7 +1,13 @@
 .site-foot {
   padding: var(--space-s-m);
-  background: var(--color-dark);
-  color: var(--color-light);
+
+  /* light mode */
+  /*background: var(--color-dark);*/
+  /*color: var(--color-light);*/
+  
+  /* dark mode */
+  background: var(--color-light);
+  color: var(--color-secondary);
 }
 
 .site-foot__inner {

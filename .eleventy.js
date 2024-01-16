@@ -132,7 +132,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(bundlerPlugin);
   eleventyConfig.addPlugin(postGraph, {
     sort: 'desc',
-    boxColor: '#dae3db'
+    boxColor: '#555' //dark-mode
+    // boxColor: '#dae3db' //light-mode
   });
 
   // 	--------------------- Passthrough File Copy -----------------------
