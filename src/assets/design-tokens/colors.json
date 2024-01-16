@@ -4,15 +4,27 @@
   "items": [
     {
       "name": "Dark",
-      "value": "#404040"
-    },
-    {
-      "name": "Light",
       "value": "#F3F3F3"
     },
     {
+      "name": "Light",
+      "value": "#404040"
+    },
+    {
       "name": "Light Glare",
-      "value": "#FFFFFF"
+      "value": "#111"
+    },
+    {
+      "name": "Light Mode Dark",
+      "value": "#404040"
+    },
+    {
+      "name": "Light Mode Light",
+      "value": "#F3F3F3"
+    },
+    {
+      "name": "Light Mode Light Glare",
+      "value": "#fff"
     },
     {
       "name": "Primary",
