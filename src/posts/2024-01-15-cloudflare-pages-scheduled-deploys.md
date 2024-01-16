@@ -89,6 +89,6 @@ export default {
 + For some reason, Cloudflare seems to execute the route (or something hits the route) a bunch of times a day. So I'd advise disabling it
 + This way only the cron trigger will enable this worker
 
-5. Check it in the morning
+6. Check it in the morning
 
 And with any luck, maybe there will even be a webmention at the bottom of this post in the morning. Or maybe not. But either way the cron job will deploy it 😍
