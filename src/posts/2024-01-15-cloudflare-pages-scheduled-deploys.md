@@ -2,6 +2,7 @@
 title: 'Cloudflare Pages Cron Deploys'
 description: 'Scheduling static site deploys daily'
 date: '2024-01-15T09:00:00.000-05:00'
+updated: '2024-01-16T09:00:00.000-05:00'
 tags:
 - 11ty
 - eleventy
@@ -43,23 +44,36 @@ Now ideally we could trigger builds whenever a mention happens. But that seems l
 
 Here's what I ended up with. Nothing too fancy.
 
+==Updated 2024-01-16 to run only on cron schedules. The old version ran too often via HTTP request somehow==
+
 ```javascript
+async function triggerDeploy(request, env, ctx) {
+  const deployHook = "<paste your deploy hook here>";
+
+  await fetch(deployHook, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  return "Deploy initiated";
+}
+
 export default {
-  async fetch(request, env, ctx) {
-    const deployHook = "<paste your deploy hook here>";
-    
-    await fetch(deployHook, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" }
-    });
-    
-    return new Response("Deploy initiated");
+  // See https://developers.cloudflare.com/workers/runtime-apis/handlers/scheduled/
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(triggerDeploy());
   },
+  
+  // Kept disabled just to show it here.
+  async fetch(request, env, ctx) {
+    return new Response("Noop. This worker only works on a cron schedule.");
+  }
 };
 ```
 
 + Once done, click `Save and deploy`
-+ You can now test it out by hitting the `Send` button in the test area. If you go back to your Pages you can see a deploy is initiated.
 
 4. Setup a Cron Trigger
 
@@ -69,6 +83,11 @@ export default {
 + Take a peek at the "execution summary" area to see that it runs at the times you expect. Kinda nice because cron triggers are always kinda confusing 🙃
 
 {% imagePlaceholder "./src/assets/images/posts/cloudflare-cron-trigger.jpg", "Cloudflare Cron Trigger" %}
+
+5. Disable the Route ==added 2024-01-16==
+
++ For some reason, Cloudflare seems to execute the route (or something hits the route) a bunch of times a day. So I'd advise disabling it
++ This way only the cron trigger will enable this worker
 
 5. Check it in the morning
 
