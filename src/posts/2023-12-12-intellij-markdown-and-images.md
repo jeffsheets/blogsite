@@ -2,6 +2,7 @@
 title: 'IntelliJ Markdown and Images'
 description: 'Improving the local 11ty blog DX'
 date: '2023-12-12T09:00:00.000-05:00'
+updated: '2023-01-24T09:00:00.000-05:00'
 tags:
 - 11ty
 - eleventy
@@ -10,6 +11,11 @@ tags:
 ---
 
 IntelliJ is my go-to coding editor - and even though I tried [blogging with VSCode](https://sheetsj.com/blog/vscode-pasting-11ty-images/) my mind kept opening IntelliJ so I stopped fighting it. IntelliJ needs a few Markdown settings to make the developer experience friendly for content creation -- and especially pasting of images directly into md files. Once configured the overall usability flow is decent!
+
+> ==2024-01-24:== Shortly after writing this post I updated to the latest IntelliJ 2023.3.2 and the plugin is no longer compatible with this version.
+> It appears it stopped at version 2023.1.1. There's a [github issue](https://github.com/vsch/idea-multimarkdown/issues/935) but the developer
+> mentions in the readme that the project might be on hold. So for now I'm back to using the default IntelliJ Markdown capabilities.
+> I'm leaving this post up though, in hopes that it applies if/when the plugin is updated
 
 ---
 
