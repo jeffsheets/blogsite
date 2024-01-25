@@ -1,6 +1,18 @@
 const sanitizeHTML = require("sanitize-html");
 const meta = require('../../src/_data/meta');
 
+const sanitize = (entry) => {
+  if (entry.content && entry.content.html) {
+    return {
+      ...entry,
+      content: sanitizeHTML(entry.content.html, {
+        allowedTags: ["b", "i", "em", "strong", "a"],
+      }).replace(/\?\?\?\?/g, '')
+    }
+  }
+  return entry;
+};
+
 /**
  * Remixed via heavy inspiration from https://www.bobmonsour.com/posts/adding-webmentions-to-my-site/
  */
@@ -11,21 +23,9 @@ function webmentionsByUrl(webmentions, url) {
     comments: ["mention-of", "in-reply-to"],
   };
 
-  const sanitize = (entry) => {
-    if (entry.content && entry.content.html) {
-      return {
-        ...entry,
-        content: sanitizeHTML(entry.content.html, {
-          allowedTags: ["b", "i", "em", "strong", "a"],
-        }).replace(/\?\?\?\?/g, '')
-      }
-    }
-    return entry;
-  };
-
   const pageWebmentions = webmentions
     .filter(
-      (mention) => mention["wm-target"] === meta.authorWebsite + url
+      (mention) => mention["wm-target"] === encodeURI(meta.authorWebsite + url)
     )
     .sort((a, b) => new Date(a.published) - new Date(b.published))
     .map(sanitize);
