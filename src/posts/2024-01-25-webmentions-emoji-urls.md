@@ -57,6 +57,7 @@ const pageWebmentions = webmentions.filter(
 - Short of that, could spin up a tiny database and accept the brid.gy mentions to eliminate the webmention.io portion.
 - Could setup brid.gy publishing to send mastodon messages when new blogs are posted. But I'll probably find a way to send directly from the 11ty build
 - Fix that emoji background masking in the title of my posts
+- Fix emojis in the social preview svg file
 - definitely using more emojis in my URLs 🎉
 
 > Did you know 11ty tags could be emojis too? [https://sheetsj.com/tags/💻/]((/tags/💻/))
