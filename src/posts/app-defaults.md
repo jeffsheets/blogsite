@@ -20,7 +20,7 @@ A list of the default Apps that I use for various things. Kind of like an abbrev
 - 📷 Camera - iOS Camera
 - 🏞️ Photo Management - Google Photos
 - 📆 Calendar - Google Calendar
-- 📁 Cloud File Storage - iCloud, Google Drive, Dropbox
+- 📁 Cloud File Storage - Google Drive, Dropbox
 - 📖 RSS - Inoreader
 - 🙍️ Contacts - Google Contacts
 - 🌐 Browser - Safari
