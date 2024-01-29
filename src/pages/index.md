@@ -1,6 +1,5 @@
 ---
 title: Uncommented Bytes
-description: 'Jeff Sheets'
 layout: home
 permalink: '/index.html'
 ---

@@ -1,7 +1,7 @@
 ---
 title: About Jeff Sheets
 permalink: /about/index.html
-description: About me(!)
+description: Info | Projects | Contact | for Jeff Sheets
 layout: page
 ---
 
