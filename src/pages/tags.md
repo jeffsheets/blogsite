@@ -5,8 +5,11 @@ pagination:
   alias: tag
 permalink: /tags/{{ tag | slugify }}/
 layout: page
+eleventyComputed:
+    seo:
+        title: '{{ tag | slugify }} Tagged Posts | {{ meta.siteName }}'
 ---
-<h1>Tagged “{{ tag }}”</h1>
+<h1 class="page-title">Tagged “{{ tag }}”</h1>
 
 <ul>
   {% set taglist = collections[tag] %}
