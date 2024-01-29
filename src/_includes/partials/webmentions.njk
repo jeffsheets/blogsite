@@ -3,7 +3,7 @@
         <h4>Likes ❤️</h4>
         <div class="likes">
           {% for item in mentions.likes %}
-              <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
+              <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" loading="lazy" alt="photo of the author of one of the webmentions for this page"></a>
           {% endfor %}
         </div>
     {% endif %}
@@ -12,19 +12,19 @@
         <h4>Reposts ♻</h4>
         <div class="reposts">
             {% for item in mentions.reposts %}
-                <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" alt="photo of the author of one of the webmentions for this page"></a>
+                <a href="{{ item.url }}"><img src="{{ item.photo }}" class="mention-image" loading="lazy" alt="photo of the author of one of the webmentions for this page"></a>
             {% endfor %}
         </div>
     {% endif %}
 
     {% if mentions.comments %}
         <details>
-            <summary>{{ mentions.comments | length }} Comment{{ "s" if mentions.comments | length > 1 }} 💬</summary>
+            <summary>{{ mentions.comments | length }} Comment{{ "s" if mentions.comments | length !== 1 }} 💬</summary>
             <div class="comments">
                 {% for item in mentions.comments %}
                     <div class="comment">
                         <a href="{{ item.author.url }}" class="comment-author">
-                            <img src="{{ item.author.photo}}" class="mention-image" alt="photo of the author of one of the webmentions for this page">
+                            <img src="{{ item.author.photo}}" class="mention-image" loading="lazy" alt="photo of the author of one of the webmentions for this page">
                             <span class="comment-author-text">{{ item.author.name }}</span>
                         </a>
                         <a class="comment-date" href="{{ item.url }}">{{ item.published | formatDate('YYYY-MM-DD HH:MM') }}</a>
