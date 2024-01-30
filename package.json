@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "start": "ELEVENTY_ENV=dev eleventy --serve --watch",
+    "start": "ELEVENTY_ENV=dev eleventy --serve --watch --quiet",
     "start-prod": "ELEVENTY_ENV=prod eleventy --serve --watch",
     "build": "npm run clean && ELEVENTY_ENV=prod eleventy",
     "build-dev": "npm run clean && eleventy"

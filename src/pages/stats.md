@@ -1,16 +1,22 @@
 ---
-title: Uncommented Bytes Stats and Metrics
+title: Uncommented Bytes Statistics
 permalink: /stats/index.html
 layout: page
 ---
 
-## Top 7 Posts (last 3 months)
+## 🔥 Posts (hits/day ~ 3 months)
 
-{% for page in umami.topPages %}
-- [{{ page.path }}]({{ page.path }})
+{% for hot in stats.hotPosts %}
+1. [{{ hot.path }}]({{ hot.path }})
 {% endfor %}
 
-## Post Stats
+## 📈 Posts (total hits ~ 3 months)
+
+{% for top in stats.topPosts %}
+1. [{{ top.path }}]({{ top.path }})
+{% endfor %}
+
+## Posting Days Over Time
 
 See how I'm posting over time (thanks to the [postgraph plugin](https://postgraph.rknight.me)):
 {% postGraph collections.posts %}
