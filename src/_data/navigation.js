@@ -17,6 +17,10 @@ module.exports = {
       url: '/about/#projects'
     },
     {
+      text: 'Stats',
+      url: '/stats/'
+    },
+    {
       text: 'GasPumpr',
       url: 'https://gaspumpr.com/'
     }

@@ -18,7 +18,7 @@ module.exports = async function () {
   });
   // [{x: '/', y: 177}, ...]
   const metrics = await res;
-  const topPages = metrics.filter(it => it.x.match(/^\/blog\/.+/)).slice(0, 5).map(it => ({
+  const topPages = metrics.filter(it => it.x.match(/^\/blog\/.+/)).slice(0, 8).map(it => ({
     path: decodeURI(it.x),
     count: it.y
   }));
