@@ -4,7 +4,7 @@ permalink: /stats/index.html
 layout: page
 ---
 
-## Top 8 Pages (last 3 months)
+## Top 10 Pages (last 3 months)
 
 <ul class="top-pages">
   {% for page in umami.topPages %}
