@@ -8,10 +8,10 @@ layout: page
 ---
 
 **What background data is collected?**
-This site does not use any third party tracking scripts and collects no data of any kind.
+This site uses [Umami](https://umami.is) a pageview analytics tracker. It [doesn't collect any personal info](https://umami.is/blog/why-privacy-matters).
 
 **How do I use the data you provide?**
-This website does not collect any data.
+It keeps anonymous stats on charts about pageviews, and feeds the popular posts section of the [Stats](/stats/) page.
 
 **How secure is your data?**
-Very secure, as this website does not collect any information.
+Umami does not use cookies, does not collect any personal information, and does not track between websites. Umami is [GDPR compliant](https://umami.is/docs/faq)
