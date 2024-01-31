@@ -6,17 +6,13 @@ function dateDiff(first, second) {
 
 /** 
  * gets metrics only for our posts, starting with /blog/ or the year like /2019
- *  - and decodes URI for emojis
  */
 function filterPosts(umami) {
-  if (!umami.metrics) {
+  if (!umami?.metrics) {
     return [];
   }
 
-  return umami.metrics.filter(it => it.x.match(/^(\/blog\/.+|\/2)/)).map(it => ({
-    path: decodeURI(it.x),
-    count: it.y
-  }));
+  return umami.metrics.filter(it => it.path.match(/^(\/blog\/.+|\/2)/));
 }
 
 /** figures out countPerDay using 11ty date and umami count */
@@ -31,7 +27,7 @@ function gatherPosts(collections, umami) {
       const days = eleventyPost ? Math.max(dateDiff(eleventyPost.date, Date.now()), 1) : 1;
       return ({
         ...umamiPost,
-        date: eleventyPost?.date,
+        date: eleventyPost?.date, //paginated pages like /blog/page/1 have no date. so keep blank and filter out below
         countPerDay: umamiPost.count / days,
         days
       });

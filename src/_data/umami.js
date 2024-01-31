@@ -11,7 +11,7 @@ module.exports = async function () {
   const endAt = Date.now();
   
   const url = `https://api.umami.is/v1/websites/${meta.umami.websiteId}/metrics?startAt=${startAt}&endAt=${endAt}&type=url`;
-  const res = EleventyFetch(url, {
+  const response = EleventyFetch(url, {
     duration: "1h",
     type: "json",
     fetchOptions: {
@@ -21,8 +21,13 @@ module.exports = async function () {
     }
   });
   // [{x: '/', y: 177}, ...]
-  const metrics = await res;
+  const metrics = await response;
+  
+  // decode path URI for emoji characters
   return {
-    metrics
+    metrics: metrics.map(it => ({
+      path: decodeURI(it.x),
+      count: it.y
+    }))
   };
 };
