@@ -22,11 +22,13 @@ function webmentionsByUrl(webmentions, url) {
     reposts: ["repost-of"],
     comments: ["mention-of", "in-reply-to"],
   };
+  const allTypes = [...allowedTypes.likes, ...allowedTypes.reposts, ...allowedTypes.comments];
 
   const pageWebmentions = webmentions
     .filter(
       (mention) => mention["wm-target"] === encodeURI(meta.authorWebsite + url)
     )
+    .filter(it => allTypes.includes(it["wm-property"]))
     .sort((a, b) => new Date(a.published) - new Date(b.published))
     .map(sanitize);
 
@@ -46,9 +48,11 @@ function webmentionsByUrl(webmentions, url) {
       const { author, published, content } = comment;
       return author && author.name && published && content;
     });
-
-  const mentionCount = likes.length + reposts.length + comments.length;
-  return { likes, reposts, comments, mentionCount };
+  
+  // Super high probability this is the mastodon url, though not exact
+  const mastodonUrl = pageWebmentions.length > 0 && pageWebmentions[0].url.split('#')[0];
+  
+  return { likes: likes.length, reposts: reposts.length, comments: comments.length, mastodonUrl, mentionCount: pageWebmentions.length };
 }
 
 module.exports = { webmentionsByUrl };
