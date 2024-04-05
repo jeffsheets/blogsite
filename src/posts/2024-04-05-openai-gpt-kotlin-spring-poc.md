@@ -6,7 +6,8 @@ tags:
 - GenAI
 - ChatGPT
 - Kotlin
-- SpringBoot
+- Spring Boot
+- Spring
 ---
 
 Generative AI is all the hype lately, so why not show how to call the OpenAI GPT-4 ChatGPT API from Kotlin using Spring-AI?!? It can be done with a surprisingly small amount of upfront setup. So here is an example REST API that returns either a Quote or a Haiku written by the all-knowing genie of GenAI itself -- GPT-4.
