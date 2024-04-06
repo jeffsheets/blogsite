@@ -61,7 +61,7 @@
 
     {% if (meta.env === 'prod') %}
     <!-- umami analytics tracking -->
-    <script async src="{{ meta.umami.jsLocation }}" data-website-id="{{ meta.umami.websiteId }}"></script>
+    <script defer src="{{ meta.umami.jsLocation }}" data-website-id="{{ meta.umami.websiteId }}"></script>
     {% endif %}
 
     <!-- everything else: meta tags, icons, open graph etc.  -->
