@@ -7,6 +7,7 @@ tags:
 - dns
 - jamstack
 - html
+- GasPumpr
 modified_time: '2023-09-06T15:57:00.831-05:00'
 blogger_id: tag:blogger.com,1999:blog-6970836.post-7170376850813869598
 permalink: 2023/09/free-static-hosting-w-server-stats.html
