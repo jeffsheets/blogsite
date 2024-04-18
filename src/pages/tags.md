@@ -19,3 +19,14 @@ eleventyComputed:
     </li>
   {% endfor %}
 </ul>
+<hr />
+<details open>
+  <summary>All Tags</summary>
+  <div class="cluster" style="gap: var(--space-s);">
+    {% for tag in collections.all | getAllTags | filterTagList | sort %}
+  
+      <a href="/tags/{{ tag | slugify }}/" class="post-tag">{{ tag }}</a>
+  
+    {% endfor %}
+  </div>
+</details>
