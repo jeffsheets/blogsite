@@ -31,6 +31,9 @@ preloads:
         {% endfor %}
         </dd>
       {% endif %}
+      
+      <dt>Reading time:</dt>
+      <dd>About {{ content | readingTime }}</dd>
     </dl>
 
     {{ content | safe }}

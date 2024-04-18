@@ -30,7 +30,8 @@ const {
   mdInline,
   splitlines,
   removeHtmlSuffix,
-  webmentionsByUrl
+  webmentionsByUrl,
+  readingTime
 } = require('./config/filters/index.js');
 
 // module import shortcodes
@@ -72,6 +73,7 @@ module.exports = eleventyConfig => {
 
   // 	---------------------  Custom filters -----------------------
   eleventyConfig.addFilter('webmentionsByUrl', webmentionsByUrl);
+  eleventyConfig.addFilter('readingTime', readingTime);
   eleventyConfig.addFilter('limit', limit);
   eleventyConfig.addFilter('where', where);
   eleventyConfig.addFilter('escape', escape);
