@@ -113,10 +113,10 @@ main:focus {
 }*/
 
 /* Base selection styles that invert whatever colours are rendered */
-::selection {
-  background: var(--color-primary);
-  color: var(--color-light);
-}
+/*::selection {*/
+/*  background: var(--color-primary);*/
+/*  color: var(--color-light);*/
+/*}*/
 
 .preload-transitions * {
   transition: none !important;

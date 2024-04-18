@@ -13,10 +13,10 @@
   max-inline-size: unset;
 }
 
-.card ::selection {
-  color: var(--color-dark);
-  background: var(--color-secondary);
-}
+/*.card ::selection {*/
+/*  color: var(--color-dark);*/
+/*  background: var(--color-secondary);*/
+/*}*/
 
 .card h2 {
   font-size: var(--size-step-3);
