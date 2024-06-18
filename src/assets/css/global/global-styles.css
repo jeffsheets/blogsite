@@ -38,13 +38,13 @@ h3 {
 p,
 li,
 blockquote:not([class]) {
-  max-inline-size: 50ch;
+  max-inline-size: 80ch;
 }
 
 h1,
 h2,
 h3 {
-  max-inline-size: 20ch;
+  max-inline-size: 80ch;
 }
 
 blockquote {

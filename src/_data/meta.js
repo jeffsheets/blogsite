@@ -27,7 +27,7 @@ module.exports = {
       'Tech briefs and notes by Jeff Sheets'
   },
   pagination: {
-    itemsPerPage: 20
+    itemsPerPage: 21
   },
   address: {
     email: 'jeffsheets@gmail.com'

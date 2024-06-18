@@ -1,6 +1,6 @@
 .prose {
   --flow-space: var(--space-m-l);
-  --wrapper-max-width: 55rem;
+  --wrapper-max-width: 70rem;
 }
 .prose-home {
   --flow-space: var(--space-m-l);
