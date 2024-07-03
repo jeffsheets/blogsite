@@ -17,7 +17,8 @@ module.exports = {
     opengraph_default_alt: 'sheetsj.com blog', // alt text for default meta image
     twitterSite: '@sheetsj', // i.e. @site - twitter profile of the site
     twitterCreator: '@sheetsj', // i.e. @author -  twitter profile of the site
-    mastodonProfile: 'https://hachyderm.io/@jeffsheets' // url to your mastodon instance/profile
+    mastodonProfile: 'https://hachyderm.io/@jeffsheets', // url to your mastodon instance/profile
+    mastodonLink: '@jeffsheets@hachyderm.io'
   },
   blog: {
     // this is for the rss feed

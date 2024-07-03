@@ -22,6 +22,7 @@
 <!-- Mastodon verified site -->
 <link rel="me" href="{{ meta.meta_data.mastodonProfile }}" />
 {% endif %}
+<meta name="fediverse:creator" content="{{ meta.meta_data.mastodonLink }}" />
 
 <!-- Open Graph meta  -->
 <meta property="og:url" content="{{ meta.url }}{{ page.url | removeHtmlSuffix }}" />
