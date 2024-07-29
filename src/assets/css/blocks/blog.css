@@ -1,3 +1,7 @@
+.blog h2, .blog h3 {
+  color: var(--color-light-mode-light);
+}
+
 .blog h1 {
   font-size: var(--size-step-4);
 }
