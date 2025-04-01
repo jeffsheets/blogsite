@@ -1,7 +1,7 @@
 ---
 title: 'Record and Replay External APIs for Kotlin SpringBoot'
 description: 'Local dev with WireMock for 3rd Party APIs'
-date: '2024-06-03T09:00:00.000-05:00'
+date: '2025-03-03T09:00:00.000-05:00'
 tags:
 - WireMock
 - Kotlin
