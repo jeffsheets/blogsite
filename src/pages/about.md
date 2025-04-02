@@ -21,6 +21,7 @@ Sr Principal Consultant @ [DevObsessed](https://www.devobsessed.com)
 <video muted="" controls="" src="https://twitter.sheetsj.com/video/1374171248813608968.mp4" poster="https://twitter.sheetsj.com/img/x_mMyvEl7z.jpeg" width="200"></video>  
 <sup>[[tweet thread]](https://twitter.sheetsj.com/1374171248813608968/)</sup>
 - twitter.sheetsj.com - Twitter Archive
+- balatro.sheetsj.com - Balatro CoPilot for Teams - Coding Companion
 - [Github](https://github.com/jeffsheets) repos
 - Github [gists](https://gist.github.com/jeffsheets/)
 

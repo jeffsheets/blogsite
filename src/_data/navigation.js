@@ -23,6 +23,10 @@ module.exports = {
     {
       text: 'GasPumpr',
       url: 'https://gaspumpr.com/'
+    },
+    {
+      text: 'BalatroAI',
+      url: 'https://balatro.sheetsj.com/'
     }
   ],
   bottom: [
