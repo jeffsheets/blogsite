@@ -10,6 +10,11 @@
     "icon": "mastodon.svg"
   },
   {
+    "platform": "bluesky",
+    "url": "https://bsky.app/profile/sheetsj.com",
+    "icon": "bluesky.svg"
+  },
+  {
     "platform": "github",
     "url": "https://github.com/jeffsheets",
     "icon": "github.svg"
