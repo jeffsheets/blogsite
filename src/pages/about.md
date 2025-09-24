@@ -22,6 +22,7 @@ Sr Principal Consultant @ [DevObsessed](https://www.devobsessed.com)
 <sup>[[tweet thread]](https://twitter.sheetsj.com/1374171248813608968/)</sup>
 - twitter.sheetsj.com - Twitter Archive
 - balatro.sheetsj.com - Balatro CoPilot for Teams - Coding Companion
+- huskerfinder.sheetsj.com - Nebraska Cornhuskers radio station finder for 🏈🏐
 - [Github](https://github.com/jeffsheets) repos
 - Github [gists](https://gist.github.com/jeffsheets/)
 

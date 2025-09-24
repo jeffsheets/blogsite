@@ -27,6 +27,10 @@ module.exports = {
     {
       text: 'BalatroAI',
       url: 'https://balatro.sheetsj.com/'
+    },
+    {
+      text: 'HuskerFinder',
+      url: 'https://huskerfinder.sheetsj.com/'
     }
   ],
   bottom: [
