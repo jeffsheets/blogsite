@@ -6,14 +6,15 @@ const imageShortcodePlaceholder = async (
   src,
   alt,
   caption,
-  sizes = '(min-width: 55rem) 820px, 100vw'
+  sizes = '(min-width: 55rem) 820px, 100vw',
+  maxWidth = null
 ) => {
   if (!alt) {
     throw new Error(`Missing \`alt\` on myImage from: ${src}`);
   }
 
   let metadata = await Image(src, {
-    widths: [320, 570, 820],
+    widths: [320, 570, 820, 1200, 1600],
     formats: ['webp', 'jpeg'],
     urlPath: '/assets/images/',
     outputDir: './dist/assets/images/',
@@ -37,8 +38,10 @@ const imageShortcodePlaceholder = async (
     imgSrc = pathParts.join('/') + '/' + src;
   }
 
+  const figureStyle = maxWidth ? ` style="max-width: ${maxWidth};"` : '';
+
   return htmlmin.minify(
-    `<figure>
+    `<figure${figureStyle}>
      <picture>
     ${Object.values(metadata)
       .map(imageFormat => {
