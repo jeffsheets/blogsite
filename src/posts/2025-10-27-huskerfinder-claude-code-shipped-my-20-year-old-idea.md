@@ -1,7 +1,7 @@
 ---
 title: "HuskerFinder: Claude Code Shipped my ~20 year old idea"
 description: Curing my web author's block
-date: 2025-10-27
+date: '2025-10-27T10:00:00.000-05:00'
 tags:
   - AI
   - development
