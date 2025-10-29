@@ -1,0 +1,24 @@
+/* View Transitions API - Cross-Document */
+
+/* Enable cross-document view transitions */
+@view-transition {
+  navigation: auto;
+}
+
+/* Slow down the default cross-fade */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom transition for post titles - morph smoothly */
+[style*="view-transition-name"] {
+  contain: layout;
+}
+
+::view-transition-old(post-title),
+::view-transition-new(post-title) {
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
