@@ -32,6 +32,8 @@ Sr Principal Consultant @ [DevObsessed](https://www.devobsessed.com)
 
 🔗 [LinkedIn](https://www.linkedin.com/in/jeffsheets/) profile
 
+💼 Digital business card: `npx jeffsheets`
+
 ## Credits
 
 Thanks to [eleventy-excellent](https://github.com/madrilene/eleventy-excellent) for the template ❤️
