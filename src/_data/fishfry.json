@@ -51,8 +51,7 @@
       "visits": [
         { "name": "St. Gerald's" },
         { "name": "St. Columbkille" },
-        { "name": "Joe Tess" },
-        { "name": "Staneks", "away":  true, "note": "Before Schneiders leave" }
+        { "name": "Joe Tess" }
       ]
     },
     {
@@ -147,7 +146,7 @@
         { "name": "Mary Our Queen" },
         { "name": "Holy Name", "note": "+ Homy Inn" },
         { "name": "St. Vincent DePaul" },
-        { "name": "St. Stephen's", "note": "Not me - strep throat" }
+        { "name": "St. Stephen's" }
       ]
     },
     {
