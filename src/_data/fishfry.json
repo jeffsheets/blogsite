@@ -1,0 +1,160 @@
+{
+  "seasons": [
+    {
+      "year": 2010,
+      "visits": [
+        { "name": "Knights of Columbus", "location": "Bellevue" },
+        { "name": "St. Columbkille" },
+        { "name": "St. Matt's", "location": "Bellevue" },
+        { "name": "St. Bernadette", "note": "Spaghetti" },
+        { "name": "Holy Name" },
+        { "name": "John Vianney" },
+        { "name": "St. Joe", "location": "Springfield" }
+      ]
+    },
+    {
+      "year": 2011,
+      "visits": [
+        { "name": "Knights of Columbus", "location": "Bellevue" },
+        { "name": "Orlando", "away": true },
+        { "name": "Franklin", "away": true },
+        { "name": "St. Columbkille" },
+        { "name": "St. Bernadette" },
+        { "name": "Holy Ghost" },
+        { "name": "Croatian Hall" }
+      ]
+    },
+    {
+      "year": 2012,
+      "visits": [
+        { "name": "Mary Our Queen", "note": "won steak & wine" },
+        { "name": "Holy Ghost" },
+        { "name": "St. Gerald's" },
+        { "name": "St. Columbkille" },
+        { "name": "Knights of Columbus", "location": "Bellevue" },
+        { "name": "Disney", "away": true },
+        { "name": "Croatian Hall" }
+      ]
+    },
+    {
+      "year": 2013,
+      "visits": [
+        { "name": "Disney", "away": true },
+        { "name": "Tonsils", "away": true, "note": "Out for tonsils" },
+        { "name": "St. Columbkille" },
+        { "name": "Kroc Center" },
+        { "name": "Knights Hall", "location": "South Omaha" }
+      ]
+    },
+    {
+      "year": 2014,
+      "visits": [
+        { "name": "St. Gerald's" },
+        { "name": "St. Columbkille" },
+        { "name": "Joe Tess" },
+        { "name": "Staneks", "away":  true, "note": "Before Schneiders leave" }
+      ]
+    },
+    {
+      "year": 2015,
+      "visits": [
+        { "name": "St. Columbkille" },
+        { "name": "Holy Ghost", "note": "With mom and dad" },
+        { "name": "Papillion American Legion", "note": "Restaurant" },
+        { "name": "Mary Our Queen", "note": "With the guys" },
+        { "name": "Nebraska.Code() Conf", "away": true }
+      ]
+    },
+    {
+      "year": 2016,
+      "visits": [
+        { "name": "Holy Ghost" },
+        { "name": "Mary Our Queen" },
+        { "name": "Papillion American Legion", "note": "Restaurant" },
+        { "name": "St. Gerald's" }
+      ]
+    },
+    {
+      "year": 2017,
+      "visits": [
+        { "name": "Knights Hall", "location": "South Omaha" },
+        { "name": "Mary Our Queen" },
+        { "name": "St. Columbkille" },
+        { "name": "Holy Ghost" }
+      ]
+    },
+    {
+      "year": 2018,
+      "visits": [
+        { "name": "Holy Ghost" },
+        { "name": "Holy Name" },
+        { "name": "Mary Our Queen" }
+      ]
+    },
+    {
+      "year": 2019,
+      "note": "Unknown",
+      "visits": []
+    },
+    {
+      "year": 2020,
+      "note": "Coronavirus",
+      "visits": [
+        { "name": "Holy Ghost" }
+      ]
+    },
+    {
+      "year": 2021,
+      "note": "Covid-19",
+      "visits": []
+    },
+    {
+      "year": 2022,
+      "visits": [
+        { "name": "Mary Our Queen" },
+        { "name": "Hawaii", "away": true },
+        { "name": "KC", "away": true },
+        { "name": "St. Pat's", "location": "Elkhorn" },
+        { "name": "Holy Name" },
+        { "name": "Holy Ghost" }
+      ]
+    },
+    {
+      "year": 2023,
+      "visits": [
+        { "name": "Holy Ghost" },
+        { "name": "St. James" },
+        { "name": "St. Pat's", "location": "Elkhorn" },
+        { "name": "St. Pat's", "location": "Gretna" },
+        { "name": "OLL" }
+      ]
+    },
+    {
+      "year": 2024,
+      "visits": [
+        { "name": "Holy Ghost" },
+        { "name": "Mary Our Queen" },
+        { "name": "All Holy Spirit", "note": "With Blue Crew" },
+        { "name": "St. Pat's", "location": "Elkhorn" },
+        { "name": "St. Columbkille" }
+      ]
+    },
+    {
+      "year": 2025,
+      "visits": [
+        { "name": "Holy Ghost", "note": "+ Lyle's show" },
+        { "name": "Isla Mujeres", "note": "Restaurant" },
+        { "name": "Mary Our Queen" },
+        { "name": "Holy Name", "note": "+ Homy Inn" },
+        { "name": "St. Vincent DePaul" },
+        { "name": "St. Stephen's", "note": "Not me - strep throat" }
+      ]
+    },
+    {
+      "year": 2026,
+      "visits": [
+        { "name": "Holy Ghost", "note": "+ Beer City" }
+      ]
+    }
+  ]
+}

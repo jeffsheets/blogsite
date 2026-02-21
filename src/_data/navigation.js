@@ -21,12 +21,12 @@ module.exports = {
       url: '/stats/'
     },
     {
-      text: 'GasPumpr',
-      url: 'https://gaspumpr.com/'
+      text: 'FishFrys',
+      url: '/fishfry/'
     },
     {
-      text: 'BalatroAI',
-      url: 'https://balatro.sheetsj.com/'
+      text: 'GasPumpr',
+      url: 'https://gaspumpr.com/'
     },
     {
       text: 'HuskerFinder',

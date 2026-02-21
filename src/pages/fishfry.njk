@@ -1,0 +1,107 @@
+---
+title: "Omaha Fish Fry Tracker"
+permalink: /fishfry/index.html
+description: "16+ years of Omaha-area Lenten fish fry adventures, tracked since 2010"
+layout: base
+---
+
+<article class="region page">
+  <div class="wrapper flow prose">
+    <h1 class="page-title">🐟 Omaha Fish Fry Tracker</h1>
+    <p>
+      What started as fun family outings in 2010 has become a {{ fishfryStats.seasonCount }}-year tradition
+      to enjoy the best Frydays in the Omaha metro. Every Friday during Lent, we're out there
+      eating 🐟 & 🍤, sampling 🍻🍹, and winning meat wheels along the way
+    </p>
+
+    <h2>📊 By the Numbers</h2>
+    <div class="fishfry-stats-grid">
+      <div class="fishfry-stat">
+        <span class="fishfry-stat-number">{{ fishfryStats.localVisits }}</span>
+        <span class="fishfry-stat-label">Total Fish Frys</span>
+      </div>
+      <div class="fishfry-stat">
+        <span class="fishfry-stat-number">{{ fishfryStats.seasonCount }}</span>
+        <span class="fishfry-stat-label">Seasons</span>
+      </div>
+      <div class="fishfry-stat">
+        <span class="fishfry-stat-number">{{ fishfryStats.uniqueVenues }}</span>
+        <span class="fishfry-stat-label">Unique Venues</span>
+      </div>
+      <div class="fishfry-stat">
+        <span class="fishfry-stat-number">{{ fishfryStats.bestYear.year }}</span>
+        <span class="fishfry-stat-label">Best Season ({{ fishfryStats.bestYear.count }})</span>
+      </div>
+    </div>
+
+    <h2>🏆 Hall of Fame</h2>
+    <p>Most-visited fish frys across all seasons:</p>
+    <table class="fishfry-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Venue</th>
+          <th>Visits</th>
+          <th>Seasons</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for venue in fishfryStats.hallOfFame %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ venue.name }}</td>
+            <td>{{ venue.count }}</td>
+            <td><small>{{ venue.years }}</small></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <p class="fishfry-streak">🔥 <strong>Holy Ghost</strong> is on a <strong>{{ fishfryStats.holyGhostStreak }}-season streak</strong> &mdash; every year since {{ fishfryStats.holyGhostStreakStart }}!</p>
+
+    <h3>🎸 One-Hit Wonders</h3>
+    <p class="fishfry-one-hits">
+      {% for venue in fishfryStats.oneHitWonders %}{{ venue.name }} <small>({{ venue.years }})</small>{{ ", " if not loop.last }}{% endfor %}
+    </p>
+
+    <h2>📅 Season by Season</h2>
+
+    <div class="fishfry-grid">
+    {% for season in fishfry.seasons | reverse %}
+      <div class="fishfry-card {{ 'fishfry-card--current' if loop.first }}" id="season-{{ season.year }}">
+        <h3>
+          <a href="#season-{{ season.year }}" class="heading-anchor">{{ season.year }}</a>
+          {% if loop.first %}<span class="fishfry-current-badge">Current Season</span>{% endif %}
+          {% set localCount = fishfryStats.seasonLocalCounts[season.year] %}
+          {% if localCount > 0 %}
+            <span class="fishfry-season-count"><span class="fishfry-season-number">{{ localCount }}</span> fish fry{{ "s" if localCount != 1 }}</span>
+          {% endif %}
+        </h3>
+        {% if season.visits | length > 0 %}
+          <ul class="fishfry-visit-list">
+            {% for visit in season.visits %}
+              <li class="fishfry-visit {{ 'fishfry-visit--away' if visit.away }}">
+                <span class="fishfry-visit-top">{{ "✈️" if visit.away else "🐟" }}
+                  <span class="fishfry-visit-name">{{ visit.name }}</span>
+                  {%- if visit.location %}<span class="fishfry-visit-location"> &ndash; {{ visit.location }}</span>{%- endif %}</span>
+                {%- if visit.note %}<span class="fishfry-visit-note">({{ visit.note }})</span>{%- endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if season.note %}
+          <p class="fishfry-season-note">
+            {% if season.note == "Coronavirus" or season.note == "Covid-19" %}
+              {{ season.note }} 😞
+            {% elif season.note == "Unknown" %}
+              🤷 Lost to history
+            {% else %}
+              {{ season.note }}
+            {% endif %}
+          </p>
+        {% endif %}
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</article>
