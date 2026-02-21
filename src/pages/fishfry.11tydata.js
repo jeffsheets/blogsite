@@ -43,13 +43,19 @@ function computeStats() {
   const oneHitWonders = ranked.filter(v => v.count === 1);
 
   // Calculate Holy Ghost current streak (counting back from most recent season)
+  // Covid years with no visits don't break the streak
   let holyGhostStreak = 0;
   let holyGhostStreakStart = 0;
   for (let i = seasons.length - 1; i >= 0; i--) {
-    const hasHolyGhost = seasons[i].visits.some(v => v.name === 'Holy Ghost' && !v.away);
+    const season = seasons[i];
+    const hasHolyGhost = season.visits.some(v => v.name === 'Holy Ghost' && !v.away);
+    const isSkipYear = season.note === 'Coronavirus' || season.note === 'Covid-19' || season.note === 'Unknown';
     if (hasHolyGhost) {
       holyGhostStreak++;
-      holyGhostStreakStart = seasons[i].year;
+      holyGhostStreakStart = season.year;
+    } else if (isSkipYear) {
+      // Skip covid/unknown years — don't count them but don't break the streak
+      continue;
     } else {
       break;
     }
