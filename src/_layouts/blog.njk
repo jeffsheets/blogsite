@@ -19,11 +19,11 @@ layout: base
     {% set postslist = pagination.items %} {% for post in postslist %}
 
     <li class="card flow overflow-hidden">
-      <h2 style="view-transition-name: post-title-{{ post.url | slugify }};">
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      </h2>
-      {% set definedDate = post.date %} {% include "partials/date.njk" %}
-      <p>{{ post.data.description }}</p>
+      <a href="{{ post.url | url }}" class="card__link">
+        <h2 style="view-transition-name: post-title-{{ post.url | slugify }};">{{ post.data.title }}</h2>
+        {% set definedDate = post.date %} {% include "partials/date.njk" %}
+        <p>{{ post.data.description }}</p>
+      </a>
     </li>
 
     {% endfor %}

@@ -1,6 +1,6 @@
 # sheetsj.com blog
 
-The content behind the new sheetsj.com blog, after migrating it over from a super old blogger account
+The content behind the new sheetsj.com blog, after migrating it over from a super old blogger account 
 
 ## Development
 
