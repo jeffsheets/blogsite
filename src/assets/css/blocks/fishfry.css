@@ -1,0 +1,188 @@
+/* Fish Fry Tracker */
+.fishfry-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-s);
+  margin-block: var(--space-s-m);
+}
+
+.fishfry-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-s-m);
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.fishfry-stat-number {
+  font-family: var(--font-display);
+  font-size: var(--size-step-3);
+  font-weight: 900;
+  color: var(--color-secondary);
+  line-height: 1.1;
+}
+
+.fishfry-stat-label {
+  font-size: var(--size-step-min-1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: var(--space-2xs);
+}
+
+/* Hall of Fame table */
+.fishfry-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: var(--space-s-m);
+}
+
+.fishfry-table th,
+.fishfry-table td {
+  padding: var(--space-2xs) var(--space-xs);
+  text-align: left;
+  border-bottom: 1px solid var(--color-dark);
+}
+
+.fishfry-table th {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-secondary);
+  border-bottom-width: 2px;
+}
+
+.fishfry-table td:first-child,
+.fishfry-table th:first-child {
+  text-align: center;
+  width: 3rem;
+}
+
+.fishfry-table td:nth-child(3),
+.fishfry-table th:nth-child(3) {
+  text-align: center;
+  width: 4rem;
+}
+
+.fishfry-table small {
+  opacity: 0.7;
+  font-size: var(--size-step-min-1);
+}
+
+/* Streak callout */
+.fishfry-streak {
+  font-size: var(--size-step-1);
+  padding: var(--space-s-m);
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-primary);
+  text-align: center;
+}
+
+/* One-hit wonders */
+.fishfry-one-hits {
+  font-size: var(--size-step-0);
+  line-height: 1.8;
+}
+
+.fishfry-one-hits small {
+  opacity: 0.7;
+}
+
+/* Season card grid */
+.fishfry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-s-m);
+  margin-block-start: var(--space-s-m);
+}
+
+.fishfry-card {
+  background: #bbb;
+  color: var(--color-light);
+  border: 4px solid var(--color-secondary);
+  border-radius: var(--border-radius);
+  padding: var(--space-s-m);
+}
+
+.fishfry-card--current {
+  border-color: var(--color-primary);
+}
+
+.fishfry-current-badge {
+  font-size: var(--size-step-min-1);
+  font-weight: 500;
+  padding: 0.15em 0.5em;
+  border-radius: 2em;
+  background: var(--color-primary);
+  color: var(--color-light-mode-light-glare);
+  white-space: nowrap;
+}
+
+.fishfry-card h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin: 0;
+}
+
+.fishfry-season-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: var(--size-step-0);
+  font-weight: 500;
+  padding: 0.15em 0.6em;
+  border-radius: 2em;
+  background: var(--color-secondary);
+  color: var(--color-light-mode-light-glare);
+}
+
+.fishfry-season-number {
+  font-weight: 700;
+}
+
+.fishfry-season-note {
+  font-style: italic;
+  opacity: 0.7;
+  font-size: var(--size-step-1);
+  margin-block-start: var(--space-2xs);
+}
+
+/* Compact visit list */
+.fishfry-visit-list {
+  list-style: none;
+  padding-inline-start: var(--space-xs);
+  margin-block-start: var(--space-2xs);
+  border-inline-start: none;
+}
+
+.fishfry-visit {
+  display: flex;
+  flex-direction: column;
+  padding: 0.15em 0;
+  font-size: var(--size-step-0);
+  line-height: 1.4;
+}
+
+.fishfry-visit + .fishfry-visit {
+  margin-top: 0;
+}
+
+.fishfry-visit--away {
+  opacity: 0.55;
+}
+
+.fishfry-visit-name {
+  font-weight: 500;
+}
+
+.fishfry-visit-location {
+  opacity: 0.7;
+  font-size: var(--size-step-0);
+}
+
+.fishfry-visit-note {
+  font-size: clamp(0.8125rem, 0.77rem + 0.24vw, 0.96875rem);
+  font-style: italic;
+  opacity: 0.7;
+}

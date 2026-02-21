@@ -13,6 +13,7 @@ Sr Principal Consultant @ [DevObsessed](https://www.devobsessed.com)
 - Dev Efficiency Economist
 - DivOps Aficionado
 - Chief Software Archaeologist
+- [Fish Fry](/fishfry/) Fanatic 🐟
 
 ## Projects
 
@@ -23,6 +24,7 @@ Sr Principal Consultant @ [DevObsessed](https://www.devobsessed.com)
 - twitter.sheetsj.com - Twitter Archive
 - balatro.sheetsj.com - Balatro CoPilot for Teams - Coding Companion
 - huskerfinder.sheetsj.com - Nebraska Cornhuskers radio station finder for 🏈🏐
+- [Fish Fry Tracker](/fishfry/) - 17 seasons of Omaha Lenten fish fry adventures 🐟
 - [Github](https://github.com/jeffsheets) repos
 - Github [gists](https://gist.github.com/jeffsheets/)
 
