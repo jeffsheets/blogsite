@@ -36,19 +36,12 @@
   text-decoration: none;
 }
 
-/* 'clickable' */
+/* Full-card clickable link */
+.card__link {
+  display: block;
+  cursor: pointer;
+}
 
-.card:focus-within a:focus {
+.card:focus-within .card__link:focus {
   outline: none;
-}
-.card {
-  position: relative;
-}
-.card a:after {
-  bottom: 0;
-  content: '';
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
