@@ -153,7 +153,8 @@
       "year": 2026,
       "visits": [
         { "name": "Holy Ghost", "note": "+ Beer City" },
-        { "name": "St. Vincent DePaul" }
+        { "name": "St. Vincent DePaul" },
+        { "name": "St James", "note": "+ Candlelight" }
       ]
     }
   ]
