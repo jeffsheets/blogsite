@@ -69,6 +69,46 @@
   font-size: var(--size-step-min-1);
 }
 
+/* Side-by-side rankings layout */
+.fishfry-rankings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: var(--space-m-l);
+  margin-block: var(--space-s-m);
+}
+
+.fishfry-rankings-col {
+  overflow-x: auto;
+}
+
+.fishfry-rankings-col h2,
+.fishfry-rankings-col h3 {
+  margin-block-start: 0;
+}
+
+/* Fresh Fryers compact table */
+.fishfry-table--compact {
+  width: auto;
+}
+
+.fishfry-table--compact td:first-child,
+.fishfry-table--compact th:first-child {
+  text-align: left;
+  width: auto;
+}
+
+.fishfry-table--compact td:nth-child(2),
+.fishfry-table--compact th:nth-child(2) {
+  text-align: center;
+  width: auto;
+}
+
+.fishfry-table--compact td:nth-child(3),
+.fishfry-table--compact th:nth-child(3) {
+  text-align: left;
+  width: auto;
+}
+
 /* Streak callout */
 .fishfry-streak {
   font-size: var(--size-step-1);

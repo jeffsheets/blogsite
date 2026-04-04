@@ -39,8 +39,29 @@ function computeStats() {
     }))
     .sort((a, b) => b.count - a.count);
 
-  const hallOfFame = ranked.filter(v => v.count >= 2);
+  const hallOfFame = ranked.filter(v => v.count >= 3);
   const oneHitWonders = ranked.filter(v => v.count === 1);
+
+  // Fresh Fryers: venues with 2+ local visits in the last 4 seasons
+  const recentYears = seasons.slice(-4).map(s => s.year);
+  const recentCounts = {};
+  for (const season of seasons.slice(-4)) {
+    for (const visit of season.visits) {
+      if (!visit.away) {
+        recentCounts[visit.name] = (recentCounts[visit.name] || 0) + 1;
+      }
+    }
+  }
+  const freshFryers = Object.entries(recentCounts)
+    .filter(([, count]) => count >= 2)
+    .map(([name, count]) => ({
+      name,
+      count,
+      recentYears: recentYears.filter(y =>
+        seasons.find(s => s.year === y).visits.some(v => v.name === name && !v.away)
+      ).join(', ')
+    }))
+    .sort((a, b) => b.count - a.count);
 
   // Calculate Holy Ghost current streak (counting back from most recent season)
   // Covid years with no visits don't break the streak
@@ -73,7 +94,8 @@ function computeStats() {
     uniqueVenues: ranked.length,
     seasonLocalCounts,
     holyGhostStreak,
-    holyGhostStreakStart
+    holyGhostStreakStart,
+    freshFryers
   };
 }
 

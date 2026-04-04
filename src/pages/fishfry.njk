@@ -34,30 +34,56 @@ layout: base
       </div>
     </div>
 
-    <h2>🏆 Hall of Fame</h2>
-    <p>Most-visited fish frys across all seasons:</p>
-    <table class="fishfry-table">
-      <thead>
-        <tr>
-          <th>Rank</th>
-          <th>Venue</th>
-          <th>Visits</th>
-          <th>Seasons</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for venue in fishfryStats.hallOfFame %}
-          <tr>
-            <td>{{ loop.index }}</td>
-            <td>{{ venue.name }}</td>
-            <td>{{ venue.count }}</td>
-            <td><small>{{ venue.years }}</small></td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <div class="fishfry-rankings">
+      <div class="fishfry-rankings-col">
+        <h2>🏆 Hall of Fame</h2>
+        <p>Most-visited fish frys across all seasons:</p>
+        <table class="fishfry-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Venue</th>
+              <th>Visits</th>
+              <th>Seasons</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for venue in fishfryStats.hallOfFame %}
+              <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ venue.name }}</td>
+                <td>{{ venue.count }}</td>
+                <td><small>{{ venue.years }}</small></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="fishfry-rankings-col">
+        <h2>🔥 Fresh Fryers</h2>
+        <p>The reel regulars, last 4 seasons:</p>
+        <table class="fishfry-table fishfry-table--compact">
+          <thead>
+            <tr>
+              <th>Venue</th>
+              <th>Recent Visits</th>
+              <th>Seasons</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for venue in fishfryStats.freshFryers %}
+              <tr>
+                <td>{{ venue.name }}</td>
+                <td>{{ venue.count }}</td>
+                <td><small>{{ venue.recentYears }}</small></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-    <p class="fishfry-streak">🔥 <strong>Holy Ghost</strong> is on a <strong>{{ fishfryStats.holyGhostStreak }}-season streak</strong> &mdash; every year since {{ fishfryStats.holyGhostStreakStart }}!</p>
+    <p class="fishfry-streak">🔥 <strong>Holy Ghost</strong> is on a <strong>{{ fishfryStats.holyGhostStreak }}-season streak</strong> &mdash; every (possible) year since {{ fishfryStats.holyGhostStreakStart }}!</p>
 
     <h3>🎸 One-Hit Wonders</h3>
     <p class="fishfry-one-hits">
