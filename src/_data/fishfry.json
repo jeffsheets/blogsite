@@ -154,7 +154,11 @@
       "visits": [
         { "name": "Holy Ghost", "note": "+ Beer City" },
         { "name": "St. Vincent DePaul" },
-        { "name": "St James", "note": "+ Candlelight" }
+        { "name": "St. James", "note": "+ Candlelight" },
+        { "name": "Grandma Spring Break", "away": true },
+        { "name": "Nebrasketball OKC", "away": true },
+        { "name": "St. Pat's", "location": "Elkhorn", "note": "+ Old Mill Lounge & Green Onion" },
+        { "name": "All Holy Spirit", "note": "+ Winchesters" }
       ]
     }
   ]
