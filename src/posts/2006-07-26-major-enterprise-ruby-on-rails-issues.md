@@ -22,17 +22,16 @@ Greg Luck has written a <a
       on Ruby. And how is it. Well, despite being perhaps no more than 5% of the functionality of
       our applications, Ruby on Rails is the number one consumer of Oracle CPU and logical gets.
       Why? Rails does not support prepared statements, so Oracle has to reparse every
-      time.</blockquote><br /><br />He then goes on to say:<br
+      time.</blockquote>He then goes on to say:<br
       /><blockquote>And ActiveRecord seems not to have learnt Hibernate's lession; that OR
       tools suck for performance and need caching tricks to make them work
-      well.</blockquote><br />Although maybe this is a result of Prepared Statements
+      well.</blockquote>Although maybe this is a result of Prepared Statements
       being absent?<br /><br />Then, he has issues with Rails not running through a
       connection pool, because fastcgi is forking processes? Really? That sux:<br
       /><blockquote>Also, our Rails apps running in (now unmaintained) fast-cgi regularly
       go awry and fork more processes. Each one creates a new connection to Oracle. So, the opposite
-      of connection pooling; connection denial of service.</blockquote><br /><br
-      />Next:<br /><blockquote>And does Ruby support Unicode. Not really. And is
-      Rails threadsafe? No.</blockquote><br />Not threadsafe? Woah! Is this true?<br
+      of connection pooling; connection denial of service.</blockquote>Next:<br /><blockquote>And does Ruby support Unicode. Not really. And is
+      Rails threadsafe? No.</blockquote>Not threadsafe? Woah! Is this true?<br
       /><br />So I'm really looking for answers now. Is everyone that is pushing Ruby on
       Rails really looking for more money, and not thinking about the enterprise readiness of the
       product? I know the 37signals success stories, and there are many more, but what of these

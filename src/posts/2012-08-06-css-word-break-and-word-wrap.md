@@ -43,29 +43,30 @@ permalink: 2012/08/css-word-break-and-word-wrap.html
       requires wrapping your td contents inside of a div. But it does work with the jQuery
       datatables plugin.<br />
       <br />
-      <code><br />
-      CSS:<br />
-      /* forces wraps in middle of words when necessary */<br />
-      div.force-wrap {<br />
-      &nbsp; white-space: normal;<br />
-      &nbsp; word-wrap: break-word;<br />
-      }<br />
-      td.email,<br />
-      td.email div.force-wrap {<br />
-      &nbsp; width: 30em;<br />
-      }<br />
-      <br />
-      Html:<br />
-      &lt;table>&lt;tbody><br />
-      &lt;tr><br />
-      &nbsp; &lt;td class="”email”"><br />
-      &lt;div class="”forcewrap”"><br />
+      CSS:
+{% highlight "css" %}
+/* forces wraps in middle of words when necessary */
+div.force-wrap {
+  white-space: normal;
+  word-wrap: break-word;
+}
+td.email,
+td.email div.force-wrap {
+  width: 30em;
+}
+{% endhighlight %}
+      Html:
+{% highlight "html" %}
+<table><tbody>
+<tr>
+  <td class="email">
+    <div class="force-wrap">
       reallyreally.long.email.addressthatdoesnotbreak@fakeemail.com,
-      another.email.addressthatdoesnotbreak@fakeemail.com<br />
-      &lt;/div><br />
-      &lt;/td>&lt;/tr><br />
-      &lt;/tbody>&lt;/table><br />
-      </code><br />
+      another.email.addressthatdoesnotbreak@fakeemail.com
+    </div>
+  </td></tr>
+</tbody></table>
+{% endhighlight %}
       <br />
       <br />
       Additional References<br />

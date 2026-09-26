@@ -12,7 +12,7 @@ permalink: 2006/05/eclipse-mac-os-x-cvs-update-bug.html
 So I go into Eclipse (3.1.2) on my OS X (10.3.9) box and do a Team Update
       from CVS. Anytime that a file has been deleted from cvs by someone else's commit I get this
       error:<br /><blockquote>Problems encountered while deleting
-      resources.</blockquote><br />I get this error for EACH file that was deleted. Then
+      resources.</blockquote>I get this error for EACH file that was deleted. Then
       I have to open the properties on each file and unselect Read Only. After this I can Team |
       Override And Update to remove the file.<br /><br />Does this happen to anyone else
       on their Mac? I've never had this issue on Windows. I think the bug is in OS X holding the

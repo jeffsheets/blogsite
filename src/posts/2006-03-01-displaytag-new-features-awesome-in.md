@@ -29,7 +29,7 @@ I was pumped to upgrade <a
       name="export.csv.decorator" value="my.MyDecorator"/><br />
       &lt;display:setProperty name="export.pdf.decorator" value="my.MyDecorator"/><br
       /> &lt;display:setProperty name="export.xml.decorator"
-      value="my.MyDecorator"/></blockquote><br />to every jsp that I'm using a
+      value="my.MyDecorator"/></blockquote>to every jsp that I'm using a
       decorator. I submitted a <a href="http://jira.codehaus.org/browse/DISPL-295">jira
       issue</a> to the displaytag team for this.<br /><br />Now my exports are
       working, but the <a
@@ -39,11 +39,9 @@ I was pumped to upgrade <a
       the answer?<br /><br />Next I wanted to switch the Excel export to use the new POI
       support. The one comment in the changelog says to <br /><blockquote>configure it
       into your displaytag.properties using
-      'export.excel.class=org.displaytag.export.ExcelHssfView'</blockquote><br
-      />...Oops, I get a message saying that ExcelHssfView is not found. So I explode the jar and
+      'export.excel.class=org.displaytag.export.ExcelHssfView'</blockquote>...Oops, I get a message saying that ExcelHssfView is not found. So I explode the jar and
       see that the package is incorrect. I changed to this<br
-      /><blockquote>export.excel.class=org.displaytag.export.excel.ExcelHssfView</blockquote><br
-      />and now my Excel exports look pretty :-)<br /><br />Lastly I wanted to add
+      /><blockquote>export.excel.class=org.displaytag.export.excel.ExcelHssfView</blockquote>and now my Excel exports look pretty :-)<br /><br />Lastly I wanted to add
       the new RTF export feature (which is <a
       href="http://jira.codehaus.org/browse/DISPL-245">very vaguely documented</a>, but has
       a <a
@@ -51,7 +49,7 @@ I was pumped to upgrade <a
       demo</a>). Here is what I added to my displaytag.properties:<br
       /><blockquote>export.types=csv excel xml pdf rtf<br
       />export.rtf.class=org.displaytag.export.DefaultRtfExportView<br
-      />export.rtf=true</blockquote><br />It seems like it starts to go, but then I
+      />export.rtf=true</blockquote>It seems like it starts to go, but then I
       get an exception during the RTF export. I'm wondering if this deals with my usage of the <a
       href="http://displaytag.sourceforge.net/11/export_filter.html">export
       filter</a>?<br /><br />I really love displaytag, and I'd really like these
@@ -66,8 +64,7 @@ I was pumped to upgrade <a
       />For the caption/footer issue:<br />I had to setup the new export classes for
       PDF/Excel in my displaytag.properties file like this:<br
       /><blockquote>export.pdf.class=org.displaytag.export.DefaultPdfExportView<br
-      />export.excel.class=org.displaytag.export.excel.DefaultHssfExportView</blockquote><br
-      />Apparently only these new classes will display the caption/footer? I didn't realize this
+      />export.excel.class=org.displaytag.export.excel.DefaultHssfExportView</blockquote>Apparently only these new classes will display the caption/footer? I didn't realize this
       before...<br /><br />Secondly, the new classes only work when I remove my
       Decorator. So I'm going to look into my decorator and see why it fails on the exporting. My
       decorator works fine for any of the old export classes, but not the new ones that were added
@@ -81,5 +78,5 @@ I was pumped to upgrade <a
       Jorge</a>, I found that the new export classes require your Decorator to implement
       <blockquote>org.displaytag.decorator.hssf.DecoratesHssf for Excel and<br
       />org.displaytag.render.ItextTableWriter.ItextDecorator for PDF and
-      RTF</blockquote><br /><br />I just left the implemented methods blank, since
+      RTF</blockquote>I just left the implemented methods blank, since
       I don't need them. But they need to be there for everything to work...<br />[/Update]

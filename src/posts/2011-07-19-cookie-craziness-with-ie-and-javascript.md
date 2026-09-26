@@ -27,19 +27,25 @@ This is a helpful post for my future self (and others) on the peculiarities
       deprecated toGMTString()) methods will take care of this. If your cookies are not deleting
       double check the value of your expires string.<br /><br />Quirksmode has <a
       href="http://www.quirksmode.org/js/cookies.html">some good example JS code</a>. But
-      if you just want to delete a single cookie, here is my version:<br /><code><br
-      />function deleteCookie(name, domain, path) {<br /> var date = new Date();<br
-      /> date.setTime(date.getTime() - 2*24*60*60*1000); //Now - 2 days<br /> var cookie =
-      name + "=; path=" + path + "; domain=" + domain + "; expires=" + date.toUTCString();<br
-      /> document.cookie = cookie;<br />}<br /></code><br /><br
+      if you just want to delete a single cookie, here is my version:<br />
+{% highlight "javascript" %}
+function deleteCookie(name, domain, path) {
+  var date = new Date();
+  date.setTime(date.getTime() - 2*24*60*60*1000); //Now - 2 days
+  var cookie = name + "=; path=" + path + "; domain=" + domain + "; expires=" + date.toUTCString();
+  document.cookie = cookie;
+}
+{% endhighlight %}
+<br /><br
       /><h3><span style="font-size:130%;">Debugging Hints for
       IE</span></h3>While Firefox plays nicely and will easily show you the cookies you
       are using, IE makes things a little more difficult. Here are two techniques that I used to
       help see the cookies in IE:<br /><br />1 - A JS bookmarklet to view the
-      keys/values of cookies for your page<br /><code><br
-      />javascript:(function(){x=window.open();cs=document.cookie.split(';');for(c in
-      cs){x.document.write(cs[c]+'&lt;br&gt;');}x.document.close();})()<br
-      /></code><br /><br />2 - If you need to see the Domain for each cookie,
+      keys/values of cookies for your page<br />
+{% highlight "javascript" %}
+javascript:(function(){x=window.open();cs=document.cookie.split(';');for(c in cs){x.document.write(cs[c]+'<br>');}x.document.close();})()
+{% endhighlight %}
+<br /><br />2 - If you need to see the Domain for each cookie,
       go into Internet Options &gt; Privacy &gt; Advanced and Override the automatic cookie
       handling to Prompt for 1st and 3rd party cookies. Then IE will ask you to accept each cookie,
       but will also show you the key/value, Domain, expiration date, and other details for each

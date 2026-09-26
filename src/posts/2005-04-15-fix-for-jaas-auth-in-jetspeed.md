@@ -26,9 +26,13 @@ I've finally found a fix for our Jetspeed JAAS Authentication issue with
       struts bridge. I say Jetspeed, and not Weblogic, because the problem can be resolved by
       telling Weblogic to only use cookies to relay session data instead of also rewriting url's. So
       we fixed this by placing this next configuration into the weblogic.xml file of ALL of our war
-      files:<br /><code><br /> &lt;session-descriptor&gt;<br />
-      &lt;session-param&gt;<br />
-      &lt;param-name&gt;URLRewritingEnabled&lt;/param-name&gt;<br />
-      &lt;param-value&gt;false&lt;/param-value&gt;<br />
-      &lt;/session-param&gt;<br /> &lt;/session-descriptor&gt;<br
-      /></code><br /><br />At least we found a work around!
+      files:<br />
+{% highlight "xml" %}
+<session-descriptor>
+  <session-param>
+    <param-name>URLRewritingEnabled</param-name>
+    <param-value>false</param-value>
+  </session-param>
+</session-descriptor>
+{% endhighlight %}
+<br /><br />At least we found a work around!

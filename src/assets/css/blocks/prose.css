@@ -25,6 +25,12 @@
   text-decoration: none;
 }
 
+.prose a {
+  text-decoration-color: var(--color-secondary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
 .prose mark {
   background: var(--color-primary-glare);
 }

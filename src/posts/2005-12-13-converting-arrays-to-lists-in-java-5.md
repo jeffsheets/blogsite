@@ -16,9 +16,12 @@ I'm trying to write some Java 5 (or 1.5, whatever) code for the first time.
       arrays with a size of 1 instead of a List&lt;Integer>, List of ints with size
       intArray.length.<br /><br />So is this correct? Does Arrays.asList(intArray) no
       longer work for my needs?<br /><br />For now I am forced to use the following,
-      unless someone can show me the light:<br /><code><br
-      />List&lt;Integer> list = new ArrayList&lt;Integer>();<br />for
-      (Integer i : intArray) list.add(i);<br /></code><br /><br
+      unless someone can show me the light:<br />
+{% highlight "java" %}
+List<Integer> list = new ArrayList<Integer>();
+for (Integer i : intArray) list.add(i);
+{% endhighlight %}
+<br /><br
       /><blockquote>Update:<br />j yu has helped me to understand the issue at hand,
       as I have noted in the comments below. Here is the logic for easier viewing...<br
       /><br />Under 1.4, you will receive a compile time error for asList(int[]), but under
@@ -35,8 +38,7 @@ I'm trying to write some Java 5 (or 1.5, whatever) code for the first time.
       this even be the correct approach? Shouldn't the Arrays.asList(int[]) autobox the int's into a
       Integer[] for you?<br /><br />Or is there still an easier solution for me? Maybe
       through casting or generics? I stumbled upon this while converting int[] to List during a
-      Topcoder event, after updating my jdk from 1.4 to 1.5<br /></blockquote><br
-      /><blockquote><br />Update #2:<br />In a normal app, it would be easy for
+      Topcoder event, after updating my jdk from 1.4 to 1.5<br /></blockquote><blockquote><br />Update #2:<br />In a normal app, it would be easy for
       me to import the Apache Lang jar, and use <a
       href="http://jakarta.apache.org/commons/lang/api/org/apache/commons/lang/ArrayUtils.html#toObject(int[])">ArrayUtils.toObject(intArray)</a>.
       However I'm trying to do this inside of the Topcoder arena applet, so I can't include any

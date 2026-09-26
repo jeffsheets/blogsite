@@ -20,6 +20,9 @@
 
 .card h2 {
   font-size: var(--size-step-3);
+  /* long single words (StreamingMarkupBuilder, @Annotations) wrap instead of getting cropped */
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 .card h2 a,

@@ -14,13 +14,17 @@ I've found a great way to use both the Struts multibox and radio tags, and
       to output multiple linked checkboxes, so the user can select multiple items at once. The radio
       is the same idea, but for a single select.<br /><br />My jsp piece looks like
       this, and it generates a table with a radio button as the first field:<br
-      /><code><br /> &lt;c:forEach var="data"
-      items="${MyForm.dataList}"&gt;<br /> &lt;tr&gt;<br />
-      &lt;td&gt;&lt;html:radio property="selectedData"
-      value="${data.id}"/&gt;&lt;/td&gt;<br /> &lt;td&gt;&lt;c:out
-      value="${data.name}"/&gt;&lt;/td&gt;<br /> &lt;td&gt;&lt;c:out
-      value="${data.location}"/&gt;&lt;/td&gt;<br /> &lt;/tr&gt;<br
-      /> &lt;/c:forEach&gt;<br /></code><br /><br />Now, you can
+      />
+{% highlight "xml" %}
+<c:forEach var="data" items="${MyForm.dataList}">
+  <tr>
+    <td><html:radio property="selectedData" value="${data.id}"/></td>
+    <td><c:out value="${data.name}"/></td>
+    <td><c:out value="${data.location}"/></td>
+  </tr>
+</c:forEach>
+{% endhighlight %}
+<br /><br />Now, you can
       change it to a multiselect version using the multibox by replacing the html:radio tag with
       this one:<br /><code>&lt;html:multibox property="selectedData"
       value="${data.id}"/&gt;</code><br /><br />In my MyForm, I have a

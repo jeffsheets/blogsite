@@ -24,53 +24,107 @@ I really like the <a
       like the AutoComplete classes. This extension is a bit of a hack, since it makes a handful of
       assumptions.<br /><br />Here's the code that I have placed in our extensions.js
       file. Post any questions below and I'll try to answer them.<br /><br
-      /><code><br /><pre>var InPlaceEditor = {}<br />InPlaceEditor.Local
-      = Class.create();<br />Object.extend(InPlaceEditor.Local.prototype,
-      Ajax.InPlaceEditor.prototype);<br />Object.extend(InPlaceEditor.Local.prototype, {<br
-      /> enterEditMode: function(evt) {<br /> if (this.saving) return;<br /> if
-      (this.editing) return;<br /> this.editing = true;<br />
-      this.onEnterEditMode();<br /> if (this.options.externalControl) {<br />
-      Element.hide(this.options.externalControl);<br /> }<br />
-      Element.hide(this.element);<br /> this.createForm();<br />
-      this.element.parentNode.insertBefore(this.form, this.element);<br />
-      Field.scrollFreeActivate(this.editField);<br /> // stop the event to avoid a page
-      refresh in Safari<br /> if (evt) {<br /> Event.stop(evt);<br /> }<br
-      /> return false;<br /> },<br /> createForm: function() {<br /> if
-      (this.options.externalFormId) {<br /> this.form = document.createElement("span");<br
-      /> // No bound onSubmit, so the ajax part won't kick off<br /> } else {<br />
-      this.form = document.createElement("form");<br /> Element.addClassName(this.form,
-      this.options.formClassName)<br /> this.form.onsubmit = this.onSubmit.bind(this);<br
-      /> }<br /> this.form.id = this.options.formId;<br /> <br />
-      this.createEditField();<br /><br /> if (this.options.textarea) {<br /> var
-      br = document.createElement("br");<br /> this.form.appendChild(br);<br /> }<br
-      /><br /> if (this.options.okButton) {<br /> okButton =
-      document.createElement("input");<br /> okButton.type = "submit";<br />
-      okButton.value = this.options.okText;<br /> okButton.className =
-      'editor_ok_button';<br /> this.form.appendChild(okButton);<br /> }<br
-      /><br /> if (this.options.cancelLink) {<br /> cancelLink =
-      document.createElement("a");<br /> cancelLink.href = "#";<br />
-      cancelLink.appendChild(document.createTextNode(this.options.cancelText));<br />
-      cancelLink.onclick = this.onclickCancel.bind(this);<br /> cancelLink.className =
-      'editor_cancel'; <br /> this.form.appendChild(cancelLink);<br /> }<br />
-      },<br /> createEditField: function() {<br /> var text;<br />
-      if(this.options.loadTextURL) {<br /> text = this.options.loadingText;<br /> } else
-      {<br /> text = this.getText();<br /> }<br /><br /> var obj =
-      this;<br /> <br /> if (this.options.rows == 1 &&
-      !this.hasHTMLLineBreaks(text)) {<br /> this.options.textarea = false;<br /> var
-      textField = document.createElement("input");<br /> textField.obj = this;<br />
-      textField.type = "text";<br /> textField.name = this.options.formFieldName ||
-      "value";<br /> textField.value = text;<br /> textField.style.backgroundColor =
-      this.options.highlightcolor;<br /> textField.className = 'editor_field';<br /> var
-      size = this.options.size || this.options.cols || 0;<br /> if (size != 0) textField.size
-      = size;<br /> if (this.options.submitOnBlur)<br /> textField.onblur =
-      this.onSubmit.bind(this);<br /> this.editField = textField;<br /> } else {<br
-      /> this.options.textarea = true;<br /> var textArea =
-      document.createElement("textarea");<br /> textArea.obj = this;<br /> textArea.name
-      = this.options.formFieldName || "value";<br /> textArea.value =
-      this.convertHTMLLineBreaks(text);<br /> textArea.rows = this.options.rows;<br />
-      textArea.cols = this.options.cols || 40;<br /> textArea.className = 'editor_field';
-      <br /> if (this.options.submitOnBlur)<br /> textArea.onblur =
-      this.onSubmit.bind(this);<br /> this.editField = textArea;<br /> }<br />
-      <br /> if(this.options.loadTextURL) {<br /> this.loadExternalText();<br />
-      }<br /> this.form.appendChild(this.editField);<br /> }<br
-      />});</pre></code>
+      />
+{% highlight "javascript" %}
+var InPlaceEditor = {}
+InPlaceEditor.Local = Class.create();
+Object.extend(InPlaceEditor.Local.prototype, Ajax.InPlaceEditor.prototype);
+Object.extend(InPlaceEditor.Local.prototype, {
+  enterEditMode: function(evt) {
+    if (this.saving) return;
+    if (this.editing) return;
+    this.editing = true;
+    this.onEnterEditMode();
+    if (this.options.externalControl) {
+      Element.hide(this.options.externalControl);
+    }
+    Element.hide(this.element);
+    this.createForm();
+    this.element.parentNode.insertBefore(this.form, this.element);
+    Field.scrollFreeActivate(this.editField);
+    // stop the event to avoid a page refresh in Safari
+    if (evt) {
+      Event.stop(evt);
+    }
+    return false;
+  },
+  createForm: function() {
+    if (this.options.externalFormId) {
+      this.form = document.createElement("span");
+      // No bound onSubmit, so the ajax part won't kick off
+    } else {
+      this.form = document.createElement("form");
+      Element.addClassName(this.form, this.options.formClassName)
+      this.form.onsubmit = this.onSubmit.bind(this);
+    }
+    this.form.id = this.options.formId;
+
+    this.createEditField();
+
+    if (this.options.textarea) {
+      var br = document.createElement("br");
+      this.form.appendChild(br);
+    }
+
+    if (this.options.okButton) {
+      okButton = document.createElement("input");
+      okButton.type = "submit";
+      okButton.value = this.options.okText;
+      okButton.className = 'editor_ok_button';
+      this.form.appendChild(okButton);
+    }
+
+    if (this.options.cancelLink) {
+      cancelLink = document.createElement("a");
+      cancelLink.href = "#";
+      cancelLink.appendChild(document.createTextNode(this.options.cancelText));
+      cancelLink.onclick = this.onclickCancel.bind(this);
+      cancelLink.className = 'editor_cancel';
+      this.form.appendChild(cancelLink);
+    }
+  },
+  createEditField: function() {
+    var text;
+    if(this.options.loadTextURL) {
+      text = this.options.loadingText;
+    } else {
+      text = this.getText();
+    }
+
+    var obj = this;
+
+    if (this.options.rows == 1 && !this.hasHTMLLineBreaks(text)) {
+      this.options.textarea = false;
+      var textField = document.createElement("input");
+      textField.obj = this;
+      textField.type = "text";
+      textField.name = this.options.formFieldName || "value";
+      textField.value = text;
+      textField.style.backgroundColor = this.options.highlightcolor;
+      textField.className = 'editor_field';
+      var size = this.options.size || this.options.cols || 0;
+      if (size != 0) textField.size = size;
+      if (this.options.submitOnBlur)
+        textField.onblur = this.onSubmit.bind(this);
+      this.editField = textField;
+    } else {
+      this.options.textarea = true;
+      var textArea = document.createElement("textarea");
+      textArea.obj = this;
+      textArea.name = this.options.formFieldName || "value";
+      textArea.value = this.convertHTMLLineBreaks(text);
+      textArea.rows = this.options.rows;
+      textArea.cols = this.options.cols || 40;
+      textArea.className = 'editor_field';
+      if (this.options.submitOnBlur)
+        textArea.onblur = this.onSubmit.bind(this);
+      this.editField = textArea;
+    }
+
+    if(this.options.loadTextURL) {
+      this.loadExternalText();
+    }
+    this.form.appendChild(this.editField);
+  }
+});
+{% endhighlight %}

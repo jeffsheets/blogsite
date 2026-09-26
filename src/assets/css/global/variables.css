@@ -1,8 +1,8 @@
 /* Design token CSS custom properties (generated from design-tokens/*.json) */
 :root {
   /* Colors */
-  --color-dark: #ddd;
-  --color-light: #404040;
+  --color-dark: #e8e4dc;
+  --color-light: #2a2a2a;
   --color-light-glare: #111;
   --color-light-mode-dark: #404040;
   --color-light-mode-light: #F3F3F3;
@@ -37,6 +37,7 @@
   --size-step-3: clamp(1.75rem, 1.38rem + 1.84vw, 2.9375rem);
   --size-step-4: clamp(2.0625rem, 1.64rem + 2.14vw, 3.4375rem);
   --size-step-5: clamp(2.5rem, 1.08rem + 7.09vw, 7.0625rem);
+  --size-code-block: clamp(0.8125rem, 0.77rem + 0.24vw, 0.9375rem);
   --size-step-6: clamp(3rem, 0.84rem + 10.78vw, 9.9375rem);
 
   /* Font families */
@@ -51,6 +52,6 @@
   --transition-movement: 200ms linear;
   --transition-fade: 200ms ease;
   --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
-  --tracking: -0.05ch;
-  --tracking-s: -0.075ch;
+  --tracking: 0;
+  --tracking-s: -0.02em;
 }

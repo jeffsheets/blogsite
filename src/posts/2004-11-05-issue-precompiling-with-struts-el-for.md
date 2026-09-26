@@ -12,7 +12,7 @@ permalink: 2004/11/issue-precompiling-with-struts-el-for.html
 <blockquote>Edit 10/13/2005: Apparently BEA has a workaround, and it
       is <a
       href="http://support.bea.com/application?namespace=askbea&origin=ask_bea_answer.jsp&event=link.view_answer_page_solution&answerpage=solution&page=wls/S-24862.htm">fixed
-      in Service Pack 4</a>! </blockquote><br /><br />For some reason the
+      in Service Pack 4</a>! </blockquote>For some reason the
       wlappc task of weblogic blows up when trying to precompile an war that uses the Struts-EL jar.
       This works fine with only the struts.jar so something is up with the struts-el.jar. Has anyone
       else seen this problem?<br /><br />I've found a post about this in the <a

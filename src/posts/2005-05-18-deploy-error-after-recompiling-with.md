@@ -14,42 +14,34 @@ I have posted the same question at BEA's <a
       Online</a><br /><br />We are getting the following stacktrace when hitting
       the application for the first time after a redeploy. We are running on Weblogic, and the
       problem goes away after restarting the app or redeploying throught the console. Has anyone
-      seen this before?<br /><br /><code><br
-      />java.lang.NullPointerException<br /> at
-      org.apache.struts.action.RequestProcessor.getServletContext(RequestPr<br
-      />ocessor.java:1136)<br /> at
-      org.apache.struts.tiles.TilesRequestProcessor.processTilesDefinition(<br
-      />TilesRequestProcessor.java:180)<br /> at
-      org.apache.struts.tiles.TilesRequestProcessor.processForwardConfig(Ti<br
-      />lesRequestProcessor.java:309)<br /> at
-      org.apache.struts.action.RequestProcessor.process(RequestProcessor.ja<br />va:279)<br
-      /> at org.apache.struts.action.ActionServlet.process(ActionServlet.java:148<br
-      />2)<br /> at
-      org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:507)<br /> at
-      javax.servlet.http.HttpServlet.service(HttpServlet.java:740)<br /> at
-      javax.servlet.http.HttpServlet.service(HttpServlet.java:853)<br /> at
-      weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run<br
-      />(ServletStubImpl.java:971)<br /> at
-      weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubIm<br
-      />pl.java:402)<br /> at
-      weblogic.servlet.internal.TailFilter.doFilter(TailFilter.java:28)<br /> at
-      weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.ja<br />va:27)<br
-      /> at com.proprietary.LoggingFilter.doFilter(LoggingFilter.java:69)<br /> at
-      weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.ja<br />va:27)<br
-      /> at com.proprietary.SecurityFilter.doFilter(SecurityFilter.java:159)<br /><br
-      /> at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.ja<br
-      />va:27)<br /> at
-      weblogic.servlet.internal.WebAppServletContext$ServletInvocationActio<br
-      />n.run(WebAppServletContext.java:6356)<br /> at
-      weblogic.security.acl.internal.AuthenticatedSubject.doAs(Authenticate<br
-      />dSubject.java:317)<br /> at
-      weblogic.security.service.SecurityManager.runAs(SecurityManager.java:<br />118)<br
-      /> at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppSe<br
-      />rvletContext.java:3635)<br /> at
-      weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestIm<br
-      />pl.java:2585)<br /> at
-      weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)<br /> at
-      weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)<br /></code><br
+      seen this before?<br /><br />
+{% highlight "javastacktrace" %}
+java.lang.NullPointerException
+    at org.apache.struts.action.RequestProcessor.getServletContext(RequestProcessor.java:1136)
+    at org.apache.struts.tiles.TilesRequestProcessor.processTilesDefinition(TilesRequestProcessor.java:180)
+    at org.apache.struts.tiles.TilesRequestProcessor.processForwardConfig(TilesRequestProcessor.java:309)
+    at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:279)
+    at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1482)
+    at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:507)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:740)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+    at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:971)
+    at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:402)
+    at weblogic.servlet.internal.TailFilter.doFilter(TailFilter.java:28)
+    at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:27)
+    at com.proprietary.LoggingFilter.doFilter(LoggingFilter.java:69)
+    at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:27)
+    at com.proprietary.SecurityFilter.doFilter(SecurityFilter.java:159)
+    at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:27)
+    at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6356)
+    at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:317)
+    at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:118)
+    at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3635)
+    at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2585)
+    at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)
+{% endhighlight %}
+<br
       /><br />Edited 5/19/2004:<br />I have found a fix, and <a
       href="http://uncommentedbytes.blogspot.com/2005/05/nullpointer-on-weblogic-fixed.html">posted
       a new entry</a> about it. It dealt with our development deployment using an exploded

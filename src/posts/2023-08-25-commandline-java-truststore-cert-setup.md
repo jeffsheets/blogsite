@@ -64,17 +64,26 @@ permalink: 2023/08/commandline-java-truststore-cert-setup.html
       is the internal NPM/Artifactory repo. For our example we'll use `google.com` but replace this
       with your own servername to load your own certs.
       <p>
-      <b>Step 2</b> - Create a folder locally to hold these certs, even if temporarily.
-      For example: <pre>mkdir ~/.certs</pre> then <pre>cd ~/.certs</pre>
-      <p>
-      <b>Step 3</b> - Export the cert to a file using: <pre>openssl s_client
-      -servername google.com -connect google.com:443 /dev/null | openssl x509 -inform PEM -outform
-      DER -out google.com.cer</pre>
-      <p>
-      <b>Step 4</b> - Import the cert to the Java cacerts truststore:
-      <pre>"$JAVA_HOME"/bin/keytool -keystore "$JAVA_HOME"/lib/security/cacerts -importcert
-      -alias google.com -file google.com.cer</pre><br/>
-      A couple of notes about this step:
+<b>Step 2</b> - Create a folder locally to hold these certs, even if temporarily. For example:
+
+```shell
+mkdir ~/.certs
+cd ~/.certs
+```
+
+<b>Step 3</b> - Export the cert to a file using:
+
+```shell
+openssl s_client -servername google.com -connect google.com:443 < /dev/null | openssl x509 -inform PEM -outform DER -out google.com.cer
+```
+
+<b>Step 4</b> - Import the cert to the Java cacerts truststore:
+
+```shell
+"$JAVA_HOME"/bin/keytool -keystore "$JAVA_HOME"/lib/security/cacerts -importcert -alias google.com -file google.com.cer
+```
+
+A couple of notes about this step:
       <ul>
       <li>the default java cacerts password is `changeit`</li>
       <li>if you get an update denied message, and on Windows, then try running in a Git Bash

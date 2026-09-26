@@ -22,16 +22,26 @@ I've begun using <a href="http://extjs.com/">Ext JS</a> in the
       href="http://extjs.com/forum/showthread.php?p=126479#post126479">found a
       solution</a>.<br /><br />Basically you have to define a custom sortType on
       the Record. Here is my example code that sorts cities on an arbitrary "FavoriteCity"
-      index:<br /><code><br />function sortFavoriteCities(cityName) {<br
-      />var sortOrder = {'New York':0, 'London':1, 'Chicago':2, 'Paris':3};<br />return
-      sortOrder[cityName];<br />}<br /><br />var reader = new
-      Ext.data.ArrayReader({}, [<br />{name: 'city', sortType: sortFavoriteCities},<br
-      />{name: 'state'},<br />{name: 'country'}<br />]);<br
-      /></code><br /><br />I just hope that this helps someone else save a few
+      index:<br />
+{% highlight "javascript" %}
+function sortFavoriteCities(cityName) {
+  var sortOrder = {'New York':0, 'London':1, 'Chicago':2, 'Paris':3};
+  return sortOrder[cityName];
+}
+
+var reader = new Ext.data.ArrayReader({}, [
+  {name: 'city', sortType: sortFavoriteCities},
+  {name: 'state'},
+  {name: 'country'}
+]);
+{% endhighlight %}
+<br /><br />I just hope that this helps someone else save a few
       hours! And, it would be very nice if the Ext JS developers would add a helper method where we
       could just pass the "sortOrder" array into the sortType field as a custom sort order. <br
       /><code><code> {name: 'city', sortType: </code><code>{'New York':0,
       'London':1, 'Chicago':2, 'Paris':3}</code><code>}</code></code><br
       />Or extend that a step farther and allow sortType to use a different record as the sort
-      key, like <code><br />{name: 'city', sortType: 'cityIndex'}, {name:
-      'cityIndex'}</code>
+      key, like 
+{% highlight "javascript" %}
+{name: 'city', sortType: 'cityIndex'}, {name: 'cityIndex'}
+{% endhighlight %}

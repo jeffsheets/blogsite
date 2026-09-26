@@ -32,12 +32,22 @@ Today we stumbled across a fairly significant <a
       something like window.opener.makeDWRCall()). The problem is when you do that, the
       XMLHttpRequest is "owned" by the popup window even though the call resides on your main
       window.<br /><br />If you take a look at the Firefox bug listed above you will see
-      a workaround to the issue:<br /><br />function closePickupWindow(id) {<br
-      />opener.pickupId.value = id;<br />if (opener.pickupFunctionPointer != null) {<br
-      />opener.launchLookup();<br />}<br />window.close();<br /><br
-      />}<br /><br />// This is to work around the following bug in firecox<br
-      />function launchLookup() {<br />window.setTimeout('pickupFunctionPointer()',
-      0);<br />}<br /><br />Some of this code is extraneous, but the basic idea is
+      a workaround to the issue:<br /><br />
+{% highlight "javascript" %}
+function closePickupWindow(id) {
+  opener.pickupId.value = id;
+  if (opener.pickupFunctionPointer != null) {
+    opener.launchLookup();
+  }
+  window.close();
+}
+
+// This is to work around the following bug in firecox
+function launchLookup() {
+  window.setTimeout('pickupFunctionPointer()', 0);
+}
+{% endhighlight %}
+Some of this code is extraneous, but the basic idea is
       that from your popup you call a function on window.opener that uses setTimeout to issue the
       DWR call. Note that the timeout can be instantaneous because all you are really trying to do
       is change the caller of the DWR function to window.opener instead of your popup.<br

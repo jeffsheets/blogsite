@@ -2,14 +2,44 @@ code,
 pre {
   padding: 0.125em 0.4em;
   font-family: var(--font-mono);
-  background: var(--color-light-mode-light);
-  border-radius: var(--border-radius);
-  color: var(--color-light);
-  font-size: var(--size-step-0);
+  background: rgb(255 255 255 / 0.08);
+  border-radius: 0.3em;
+  color: var(--color-dark);
+  font-size: 0.85em;
+}
+
+/* subtle outline on inline code only, not code inside blocks */
+:not(pre) > code {
+  border: 1px solid rgb(255 255 255 / 0.1);
 }
 
 pre[class*='language-'] {
   padding: var(--space-s-m);
+}
+
+/* code inside a block never gets the inline-code chip styling */
+pre > code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* code blocks a bit smaller than body text; inline code keeps scaling with the sentence */
+pre,
+pre > code {
+  font-size: var(--size-code-block);
+}
+
+pre {
+  overflow-x: auto;
+}
+
+/* wrap shell commands and plain pre so the whole command is visible; real code keeps scrolling */
+pre:not([class*='language-']),
+pre:is(.language-shell, .language-bash, .language-sh),
+pre:is(.language-shell, .language-bash, .language-sh) > code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 code[class*='language-'] {
@@ -32,7 +62,7 @@ pre[class*='language-'] {
   color: var(--color-dark);
   background: var(--color-light-glare);
   
-  line-height: 1.5;
+  line-height: 1.7;
   border-radius: var(--border-radius);
 
   -moz-tab-size: 4;
@@ -240,4 +270,15 @@ pre[class*='language-'] {
 .cp_embed_wrapper iframe {
   grid-area: container;
   inline-size: 100%;
+}
+
+/* old Blogger imports pasted multi-line code as inline <code> with <br>s; render those as a block */
+:not(pre) > code:has(> br) {
+  display: block;
+  padding: var(--space-s-m);
+  border: 0;
+  background: var(--color-light-glare);
+  font-size: var(--size-code-block);
+  line-height: 1.7;
+  overflow-x: auto;
 }

@@ -18,7 +18,10 @@ After switching our jsp pages to render in w3c transitional mode (by adding
       links to the apache weblogic bridge. The bridge incorrectly places a text/html mimetype on
       everything. We fixed this by putting the mime mapping into the web.xml file of our webapp.
       Everything works beautifully again!<br /><br />Here's the mapping that needs to be
-      added:<br /><code><br />&lt;mime-mapping><br
-      />&nbsp;&nbsp;&lt;extension>css&lt;/extension><br
-      />&nbsp;&nbsp;&lt;mime-type>text/css&lt;/mime-type><br
-      />&lt;/mime-mapping><br /></code>
+      added:<br />
+{% highlight "xml" %}
+<mime-mapping>
+  <extension>css</extension>
+  <mime-type>text/css</mime-type>
+</mime-mapping>
+{% endhighlight %}

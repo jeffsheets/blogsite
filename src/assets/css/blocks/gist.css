@@ -1,0 +1,54 @@
+/*
+  Dark theme for embedded GitHub gists, matching the prism code blocks in code.css.
+  GitHub's embed stylesheet uses `.gist .x` selectors, so `.prose .gist .x` wins on specificity.
+*/
+.prose .gist .gist-file {
+  border: 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.prose .gist .gist-data,
+.prose .gist .highlight {
+  background: var(--color-light-glare);
+  border: 0;
+}
+
+.prose .gist .blob-code-inner {
+  color: var(--color-dark);
+  font-family: var(--font-mono);
+}
+
+/* GitHub sets 12px text with a fixed 20px line-height; match the prism blocks instead */
+.prose .gist :is(.blob-code-inner, .blob-num) {
+  font-size: var(--size-code-block);
+  line-height: 1.7;
+}
+
+.prose .gist .blob-num {
+  color: #666;
+  font-family: var(--font-mono);
+}
+
+.prose .gist .blob-num:hover {
+  color: var(--color-dark);
+}
+
+.prose .gist .gist-meta {
+  background: #1b1b1b;
+  color: #888;
+}
+
+.prose .gist .gist-meta a {
+  color: #aaa;
+}
+
+/* syntax colors, mapped to the prism palette in code.css */
+.prose .gist .pl-c { color: #779daf; }
+.prose .gist .pl-k { color: #d2b1e7; font-style: italic; }
+.prose .gist :is(.pl-s, .pl-pds, .pl-sr) { color: #f48ea2; }
+.prose .gist :is(.pl-c1, .pl-s .pl-v) { color: #fd9170; }
+.prose .gist :is(.pl-e, .pl-en) { color: #ffcb6b; }
+.prose .gist :is(.pl-v, .pl-smw) { color: #ee979c; }
+.prose .gist .pl-ent { color: #80cbc4; }
+.prose .gist :is(.pl-smi, .pl-s .pl-s1) { color: var(--color-dark); }
