@@ -19,9 +19,7 @@ Sr Principal Consultant @ [DevObsessed](https://www.devobsessed.com)
 
 - GasPumpr.com - an Ethanol e85 Calculator
 - Alexa PapioMenu lunch bot - [Alexa Skill Store](https://www.amazon.com/Jeff-Sheets-Papio-Menu-Lunch/dp/B08ZNJ2FQY/)- [github](https://github.com/jeffsheets/alexa-papio-lunch-menu)  
-<video muted="" controls="" src="https://twitter.sheetsj.com/video/1374171248813608968.mp4" poster="https://twitter.sheetsj.com/img/x_mMyvEl7z.jpeg" width="200"></video>  
-<sup>[[tweet thread]](https://twitter.sheetsj.com/1374171248813608968/)</sup>
-- twitter.sheetsj.com - Twitter Archive
+<video controls="" src="/assets/video/alexa-papio-menu.mp4" poster="/assets/images/alexa-papio-menu-poster.jpeg" width="200"></video>
 - balatro.sheetsj.com - Balatro CoPilot for Teams - Coding Companion
 - huskerfinder.sheetsj.com - Nebraska Cornhuskers radio station finder for 🏈🏐
 - [Fish Fry Tracker](/fishfry/) - 17 seasons of Omaha Lenten fish fry adventures 🐟

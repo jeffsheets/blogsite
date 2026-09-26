@@ -4,6 +4,11 @@ const meta = require('./meta');
 // Fetch site stats and metrics from umami for past 3 months
 module.exports = async function () {
   const UMAMI_KEY = process.env.UMAMI_KEY;
+  // umami cloud API keys now require a Pro plan, so skip gracefully without one
+  if (!UMAMI_KEY) {
+    return { metrics: [] };
+  }
+
   
   const start = new Date();
   start.setMonth(start.getMonth() - 3);
@@ -21,7 +26,13 @@ module.exports = async function () {
     }
   });
   // [{x: '/', y: 177}, ...]
-  const metrics = await response;
+  let metrics;
+  try {
+    metrics = await response;
+  } catch (e) {
+    console.warn(`[umami] skipping stats: ${e.message}`);
+    return { metrics: [] };
+  }
   
   // decode path URI for emoji characters
   return {

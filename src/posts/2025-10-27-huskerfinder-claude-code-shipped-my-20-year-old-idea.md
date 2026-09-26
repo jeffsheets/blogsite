@@ -18,7 +18,7 @@ Fast-forward to a few weeks ago and [HuskerFinder](https://huskerfinder.sheetsj.
 
 ## The Web Author's Block Problem
 
-Here's the thing - [I](/about/) [love](https://twitter.sheetsj.com/1185612834991988737/) [building](https://twitter.sheetsj.com/1374171248813608968/) [stuff](https://gaspumpr.com/). But on weekends and evenings after work these days...? I'm tired. My brain is fried from a full day of coding and meetings and architecture decisions. I want to spend hours with my family, and dogs. Especially the dogs 🐶🐶
+Here's the thing - [I](/about/) love building [stuff](https://gaspumpr.com/). But on weekends and evenings after work these days...? I'm tired. My brain is fried from a full day of coding and meetings and architecture decisions. I want to spend hours with my family, and dogs. Especially the dogs 🐶🐶
 
 {% imagePlaceholder "./src/assets/images/posts/my-dogs.jpg", "My dogs - Scout and Finley", "Finley and Scout are the best", "", "300px" %}
 

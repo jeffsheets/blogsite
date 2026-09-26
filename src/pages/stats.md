@@ -4,17 +4,21 @@ permalink: /stats/index.html
 layout: page
 ---
 
+{% if stats.hotPosts.length %}
 ## 🔥 Posts (hits/day ~ 3 months)
 
 {% for hot in stats.hotPosts %}
 1. [{{ hot.path }}]({{ hot.path }})
 {% endfor %}
+{% endif %}
 
+{% if stats.topPosts.length %}
 ## 📈 Posts (total hits ~ 3 months)
 
 {% for top in stats.topPosts %}
 1. [{{ top.path }}]({{ top.path }})
 {% endfor %}
+{% endif %}
 
 ## Posting Days Over Time
 
