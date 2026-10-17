@@ -22,6 +22,7 @@ Sr Principal Consultant @ [DevObsessed](https://www.devobsessed.com)
 <video controls="" src="/assets/video/alexa-papio-menu.mp4" poster="/assets/images/alexa-papio-menu-poster.jpeg" width="200"></video>
 - balatro.sheetsj.com - Balatro CoPilot for Teams - Coding Companion
 - huskerfinder.sheetsj.com - Nebraska Cornhuskers radio station finder for 🏈🏐
+- vikingsfinder.sheetsj.com - Minnesota Vikings radio station finder 🏈💜
 - [Fish Fry Tracker](/fishfry/) - 17 seasons of Omaha Lenten fish fry adventures 🐟
 - [Github](https://github.com/jeffsheets) repos
 - Github [gists](https://gist.github.com/jeffsheets/)

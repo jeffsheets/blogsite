@@ -31,6 +31,10 @@ module.exports = {
     {
       text: 'HuskerFinder',
       url: 'https://huskerfinder.sheetsj.com/'
+    },
+    {
+      text: 'VikingsFinder',
+      url: 'https://vikingsfinder.sheetsj.com/'
     }
   ],
   bottom: [
