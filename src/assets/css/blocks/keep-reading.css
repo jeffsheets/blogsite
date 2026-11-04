@@ -1,0 +1,81 @@
+/* "This post is old" banner on posts 5+ years old */
+.old-post-notice {
+  display: flex;
+  gap: var(--space-xs-s);
+  align-items: flex-start;
+  padding: var(--space-xs-s) var(--space-s-m);
+  border-inline-start: 4px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  font-size: 0.9em;
+}
+
+.old-post-notice p {
+  margin: 0;
+}
+
+.old-post-notice__icon {
+  font-size: 1.4em;
+  line-height: 1.2;
+}
+
+/* "Keep reading" block at the bottom of posts */
+.keep-reading {
+  margin-block-start: var(--space-l);
+  padding-block-start: var(--space-m);
+  border-block-start: 2px solid var(--color-secondary);
+}
+
+.keep-reading h2 {
+  font-size: var(--size-step-1);
+}
+
+.keep-reading__related {
+  padding: 0;
+  display: grid;
+  gap: var(--space-2xs);
+}
+
+.keep-reading__related li {
+  list-style: none;
+}
+
+.keep-reading__date {
+  display: block;
+  font-size: 0.75em;
+  opacity: 0.75;
+}
+
+.keep-reading__adjacent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--space-s-m);
+  margin-block-start: var(--space-m);
+}
+
+.keep-reading__adjacent a {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding: var(--space-s-m);
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+}
+
+.keep-reading__adjacent a:hover,
+.keep-reading__adjacent a:focus-visible {
+  border-color: var(--color-primary);
+}
+
+.keep-reading__newer {
+  grid-column: -2;
+  text-align: end;
+}
+
+.keep-reading__label {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+}

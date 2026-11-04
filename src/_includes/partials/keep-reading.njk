@@ -1,0 +1,38 @@
+{% set related = collections.posts | relatedPosts(page, 3) %}
+{% set newerPost = collections.posts | getPreviousCollectionItem(page) %}
+{% set olderPost = collections.posts | getNextCollectionItem(page) %}
+
+{% if related.length or newerPost or olderPost %}
+<nav class="keep-reading" aria-labelledby="keep-reading-heading">
+  <h2 id="keep-reading-heading">Keep reading</h2>
+
+  {% if related.length %}
+  <ul class="keep-reading__related" role="list">
+    {% for post in related %}
+    <li>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      {% set definedDate = post.date %}
+      <span class="keep-reading__date">{% include "partials/date.njk" %}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if newerPost or olderPost %}
+  <div class="keep-reading__adjacent">
+    {% if olderPost %}
+    <a href="{{ olderPost.url | url }}" class="keep-reading__older" rel="prev">
+      <span class="keep-reading__label">← Older</span>
+      <span>{{ olderPost.data.title }}</span>
+    </a>
+    {% endif %}
+    {% if newerPost %}
+    <a href="{{ newerPost.url | url }}" class="keep-reading__newer" rel="next">
+      <span class="keep-reading__label">Newer →</span>
+      <span>{{ newerPost.data.title }}</span>
+    </a>
+    {% endif %}
+  </div>
+  {% endif %}
+</nav>
+{% endif %}

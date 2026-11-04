@@ -8,6 +8,7 @@ const site = require('../../src/_data/meta');
 const {throwIfNotType} = require('../utils');
 const { webmentionsByUrl } = require('./webmentionsbyurl');
 const readingTime = require('./readingtime');
+const { relatedPosts, yearsAgo } = require('./relatedposts');
 const md = require('markdown-it')();
 
 dayjs.extend(utc);
@@ -156,5 +157,7 @@ module.exports = {
   splitlines,
   removeHtmlSuffix,
   webmentionsByUrl,
-  readingTime
+  readingTime,
+  relatedPosts,
+  yearsAgo
 };

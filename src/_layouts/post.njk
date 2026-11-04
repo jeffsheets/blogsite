@@ -36,11 +36,15 @@ preloads:
       <dd>About {{ content | readingTime }}</dd>
     </dl>
 
+    {% include 'partials/old-post-notice.njk' %}
+
     {{ content | safe }}
 
     {% set mentions = webmentions.mentions | webmentionsByUrl(page.url) %}
     {% if  mentions.mentionCount > 0 %}
       {% include 'partials/webmentions.njk' %}
     {% endif %}
+
+    {% include 'partials/keep-reading.njk' %}
   </div>
 </article>

@@ -1,0 +1,10 @@
+{% set age = page.date | yearsAgo %}
+{% if age >= 5 %}
+<aside class="old-post-notice" role="note">
+  <span class="old-post-notice__icon" aria-hidden="true">🦖</span>
+  <p>
+    Heads up: this post is from <strong>{{ page.date | formatDate('YYYY') }}</strong>, so it's {{ age }} years old.
+    Links may be dead, the tech has probably moved on, and I may not even agree with myself anymore.
+  </p>
+</aside>
+{% endif %}
